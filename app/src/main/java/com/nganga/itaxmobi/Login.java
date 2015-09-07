@@ -21,7 +21,7 @@ import java.io.FileOutputStream;
 /**
  * Created by nganga on 9/7/15.
  */
-public class login {
+public class Login {
 
 
     public class MainActivity extends Activity  {
