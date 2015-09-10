@@ -51,7 +51,7 @@ public class MainActivity extends Activity  {
                     Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
 
                     tx1.setVisibility(View.VISIBLE);
-                    tx1.setBackgroundColor(Color.RED);
+                    tx1.setBackgroundColor(Color.DKGRAY);
                     counter--;
                     tx1.setText(Integer.toString(counter));
 
