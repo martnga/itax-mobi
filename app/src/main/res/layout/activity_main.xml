@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -8,3 +9,28 @@
 
 
 </RelativeLayout>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fragment_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        class="com.nganga.itaxmobi.Login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/fragment_register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        class="com.nganga.itaxmobi.Register"
+        tools:layout="@layout/fragment_register" />
+
+</LinearLayout>
+>>>>>>> ab9c9ee7d06403fe2ae9cec413810ce90e77aef3

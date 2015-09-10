@@ -4,10 +4,21 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+<<<<<<< HEAD
 
 
 public class MainActivity extends Activity  {
 
+=======
+import android.view.View;
+
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity  {
+>>>>>>> ab9c9ee7d06403fe2ae9cec413810ce90e77aef3
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
