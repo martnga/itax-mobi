@@ -7,6 +7,9 @@
         <item name="android:textColorPrimary">#ffffff</item>
        <item name="android:colorButtonNormal">#eeeeee</item>
        <item name="android:textColor">#ff1212</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:textStyle">normal</item>
+
 
 
     </style>
