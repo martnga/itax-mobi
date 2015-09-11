@@ -2,9 +2,9 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-       <item name="android:colorPrimary">#ff1212</item>
-       <item name="android:colorPrimaryDark">#ff1212</item>
-        <item name="android:textColorPrimary">#ffffff</item>
+       <item name="colorPrimary">@color/colorPrimary</item>
+       <item name="colorPrimaryDark">#ff1212</item>
+        <item name="android:textColorPrimary"></item>
        <item name="android:colorButtonNormal">#eeeeee</item>
        <item name="android:textColor">#ff1212</item>
         <item name="android:fontFamily">sans-serif-thin</item>
@@ -13,5 +13,10 @@
 
 
     </style>
+               <color name="colorPrimary" >#ff1212</color>
+     <color name="colorPrimaryDark" >#c50000</color>
+     <color name="textColorPrimary" >#010000</color>
+     <color name="colorButtonNormal" >#ffffff</color>
+     <color name="textColor" >#010000</color>
 
 </resources>
