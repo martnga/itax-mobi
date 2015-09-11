@@ -3,8 +3,6 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
-
-
         <!--customize your stuff below-->
 
        <item name="colorPrimary">@color/colorPrimary</item>
@@ -19,9 +17,14 @@
 
     </style>
 
+    <style name="iTaxTheme" parent="Theme.AppCompat.Light">
 
+        <!--below is the color of the toolbar title-->
+        <item name="android:textColorPrimary">#000</item>
+        <!--below is the color of the icons-->
+        <item name="android:textColorSecondary">#000</item>
 
-
+    </style>
 
 
 </resources>
