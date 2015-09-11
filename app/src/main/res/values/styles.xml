@@ -3,20 +3,20 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
        <item name="colorPrimary">@color/colorPrimary</item>
-       <item name="colorPrimaryDark">#ff1212</item>
-        <item name="android:textColorPrimary"></item>
-       <item name="android:colorButtonNormal">#eeeeee</item>
-       <item name="android:textColor">#ff1212</item>
+       <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+       <item name="android:colorButtonNormal">@color/colorButtonNormal</item>
+       <item name="android:textColor">@color/textColor</item>
         <item name="android:fontFamily">sans-serif-thin</item>
         <item name="android:textStyle">normal</item>
 
 
 
     </style>
-               <color name="colorPrimary" >#ff1212</color>
-     <color name="colorPrimaryDark" >#c50000</color>
-     <color name="textColorPrimary" >#010000</color>
-     <color name="colorButtonNormal" >#ffffff</color>
-     <color name="textColor" >#010000</color>
+
+
+
+
+
 
 </resources>
