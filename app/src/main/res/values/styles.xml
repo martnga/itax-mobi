@@ -1,17 +1,30 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Material.Light">
-       <item name="android:colorPrimary">#ff1212</item>
-       <item name="android:colorPrimaryDark">#ff1212</item>
-        <item name="android:textColorPrimary">#ffffff</item>
-       <item name="android:colorButtonNormal">#eeeeee</item>
-       <item name="android:textColor">#ff1212</item>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!--customize your stuff below-->
+
+       <item name="colorPrimary">@color/colorPrimary</item>
+       <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+       <item name="android:colorButtonNormal">@color/colorButtonNormal</item>
+       <item name="android:textColor">@color/textColor</item>
         <item name="android:fontFamily">sans-serif-thin</item>
         <item name="android:textStyle">normal</item>
 
 
 
     </style>
+
+    <style name="iTaxTheme" parent="Theme.AppCompat.Light">
+
+        <!--below is the color of the toolbar title-->
+        <item name="android:textColorPrimary">#ffffff</item>
+        <!--below is the color of the icons-->
+        <item name="android:textColorSecondary">#ffffff</item>
+
+    </style>
+
 
 </resources>
