@@ -6,16 +6,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_kra"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-<<<<<<< HEAD
-            android:name=".UserAuthenticate"
-=======
-            android:name=".Login_activity"
->>>>>>> ab9c9ee7d06403fe2ae9cec413810ce90e77aef3
-            android:label="@string/app_name" >
+            android:name=".UserAuthenticate">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
