@@ -1,6 +1,7 @@
 package com.nganga.itaxmobi;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -37,10 +38,11 @@ public class Login extends Activity{
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(pinText.getText().toString().equals("admin") &&
+                if(pinText.getText().toString().equals("admin") && passwordText.getText().toString().equals("admin")) {
 
-                        passwordText.getText().toString().equals("admin")) {
-                    Toast.makeText(getApplicationContext(), "Redirecting...", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(getApplicationContext(), Home.class);
+                    startActivity(i);
+
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
