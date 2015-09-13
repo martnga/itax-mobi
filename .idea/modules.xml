@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ITaxMobi.iml" filepath="$PROJECT_DIR$/ITaxMobi.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/iTax-mobi.iml" filepath="$PROJECT_DIR$/iTax-mobi.iml" />
     </modules>
   </component>
 </project>

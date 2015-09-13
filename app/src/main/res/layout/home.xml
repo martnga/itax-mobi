@@ -29,9 +29,10 @@
         android:background="#ffff2b11"
         android:backgroundTint="#ffff2b11">
 
+
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <ListView

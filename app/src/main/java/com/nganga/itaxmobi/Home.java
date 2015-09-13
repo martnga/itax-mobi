@@ -60,11 +60,11 @@ public class Home extends Activity {
         String[] from = { "task","description","menu_icon" };
 
         // Ids of views in listview_layout
-        int[] to = { R.id.list_image,R.id.title,R.id.task_description};
+        int[] to = { R.id.title,R.id.task_description,R.id.list_image};
 
         // Instantiating an adapter to store each items
         // R.layout.listview_layout defines the layout of each item
-        SimpleAdapter adapter = new SimpleAdapter(getBaseContext(), aList, R.layout.home, from, to);
+        SimpleAdapter adapter = new SimpleAdapter(getBaseContext(), aList, R.layout.list_row, from, to);
 
         // Getting a reference to listview of main.xml layout file
         ListView e_registration_list = (ListView) findViewById(R.id.e_registration_list);
