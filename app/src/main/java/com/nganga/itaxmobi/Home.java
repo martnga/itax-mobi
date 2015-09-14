@@ -27,10 +27,6 @@ public class Home extends Activity {
 
 //        setting background color
 
-        e_returns_card.setCardBackgroundColor(Color.RED);
-        e_registration_card.setCardBackgroundColor(Color.RED);
-        e_payments_card.setCardBackgroundColor(Color.RED);
-
         e_returns_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
