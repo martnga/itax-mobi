@@ -20,6 +20,7 @@
         android:layout_height="0dp"
         android:layout_weight="30"
         android:id="@+id/e_registration_card"
+        android:clickable="true"
         android:layout_gravity="center"
         card_view:cardCornerRadius="4dp"
         android:elevation="20dp"
@@ -30,20 +31,6 @@
         android:backgroundTint="#ffff2b11">
 
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <ListView
-                android:id="@+id/e_registration_list"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:divider="#b5b5b5"
-                android:dividerHeight="1dp"
-                android:listSelector="@drawable/list_selector" />
-
-        </LinearLayout>
 
     </android.support.v7.widget.CardView>
 
@@ -63,6 +50,7 @@
         android:layout_height="0dp"
         android:layout_weight="30"
         android:layout_below="@id/e_registration_card"
+        android:clickable="true"
         android:id="@+id/e_returns_card"
         android:layout_marginTop = "5dp"
         android:layout_marginLeft = "15dp"
@@ -73,20 +61,6 @@
         android:background="#ffff2b11"
         android:backgroundTint="#ffff2b11">
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <ListView
-                android:id="@+id/e_returns_list"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:divider="#b5b5b5"
-                android:dividerHeight="1dp"
-                android:listSelector="@drawable/list_selector" />
-
-        </LinearLayout>
 
 
     </android.support.v7.widget.CardView>
@@ -106,6 +80,7 @@
         android:layout_height="0dp"
         android:layout_weight="30"
         android:layout_below="@id/e_returns_card"
+        android:clickable="true"
         android:id="@+id/e_payments_card"
         android:layout_marginTop = "5dp"
         android:layout_marginBottom="7dp"
