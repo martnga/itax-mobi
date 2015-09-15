@@ -10,14 +10,14 @@
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="30"
+        android:layout_height="10dp"
+        android:layout_weight="20"
         android:id="@+id/returns_card"
         android:clickable="true"
         android:layout_gravity="center"
         card_view:cardCornerRadius="4dp"
         android:elevation="20dp"
-        android:layout_marginTop = "35dp"
+        android:layout_marginTop = "55dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dp"
         card_view:cardBackgroundColor="#f44">
@@ -28,16 +28,16 @@
         android:layout_height="match_parent">
 
             <LinearLayout android:id="@+id/thumbnail"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:padding="3dip"
                 android:layout_alignParentLeft="true"
                 android:layout_marginRight="5dip">
 
         <ImageView
             android:id="@+id/image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
         android:scaleType="fitXY"
         android:src="@drawable/kra"/>
 
@@ -46,12 +46,12 @@
 
             <TextView
                 android:id="@+id/info_text"
-                android:layout_below="@id/thumbnail"
-                android:layout_toRightOf="@+id/thumbnail"
+                android:layout_toRightOf="@id/thumbnail"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it."
-                />
+                android:layout_height="match_parent"
+                android:text="keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it."
+                android:layout_alignParentTop="true" />
+
     </RelativeLayout>
 
 
@@ -64,13 +64,13 @@
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="30"
+        android:layout_height="10dp"
+        android:layout_weight="20"
         android:layout_below="@id/returns_card"
         android:clickable="true"
         android:id="@+id/consult_returns_card"
         android:layout_marginTop = "29dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="55dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dip"
         android:layout_gravity="center"
