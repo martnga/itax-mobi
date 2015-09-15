@@ -37,7 +37,7 @@ public class RegisterUser extends Activity implements AdapterView.OnItemSelected
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        // the toast notification didsplays what was selected
+        // the toast notification displays what was selected
         TextView myText= (TextView) view;
         Toast.makeText(this,"You selected "+myText.getText(), Toast.LENGTH_SHORT).show();
 
