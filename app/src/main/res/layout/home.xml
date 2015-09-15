@@ -79,7 +79,7 @@
             android:layout_marginTop = "55dp"
             android:textColor="#fff"
             android:textSize="17sp"
-            android:text="File your Returns.">
+            android:text="Consult and File your Returns.">
         </TextView>
 
 
@@ -120,7 +120,7 @@
             android:layout_marginTop = "55dp"
             android:textColor="#fff"
             android:textSize="17sp"
-            android:text="Calculate your annual payment.">
+            android:text="Consult and Calculate your annual payments.">
         </TextView>
 
 
