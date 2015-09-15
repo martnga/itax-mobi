@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserAutheticate">
 
-    <android.support.v7.widget.Toolbar
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/toolbar"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        app:theme="@style/iTaxTheme">
+        android:gravity="center"
+        android:layout_marginTop = "25dp"
+        android:text="Welcome to Itax Mobi. ">
+    </TextView>
 
-
-    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Tax just got simpler.">
+    </TextView>
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="25"
         android:id="@+id/login_card"
         android:layout_gravity="center"
-        card_view:cardCornerRadius="4dp"
+        card_view:cardCornerRadius="1dp"
         android:elevation="20dp"
         android:clickable="true"
-        android:layout_marginTop = "45dp"
+        android:layout_marginTop = "25dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dp"
-        android:background="#ffff2b11"
-        android:backgroundTint="#ffff2b11">
+        card_view:cardBackgroundColor="#f44">
 
         <TextView
             android:layout_width="match_parent"
@@ -46,18 +48,19 @@
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="25"
         android:layout_below="@id/login_card"
         android:id="@+id/register_card"
         android:layout_marginTop = "15dp"
+        android:layout_marginBottom = "45dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dip"
         android:layout_gravity="center"
-        card_view:cardCornerRadius="4dp"
+        card_view:cardCornerRadius="1dp"
         android:elevation="20dp"
         android:clickable="true"
-        android:background="#ffff2b11"
-        android:backgroundTint="#ffff2b11">
+        card_view:cardBackgroundColor="#f44">
 
         <TextView
             android:layout_width="match_parent"
@@ -68,4 +71,4 @@
 
     </android.support.v7.widget.CardView>
 
-</RelativeLayout>
+</LinearLayout>

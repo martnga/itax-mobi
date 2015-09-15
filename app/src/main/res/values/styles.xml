@@ -26,5 +26,9 @@
 
     </style>
 
+    <style name="MyTheme_ActionBar" parent="@style/Theme.AppCompat.Light">
+        <item name="icon">@drawable/ic_kra</item>
+    </style>
+
 
 </resources>
