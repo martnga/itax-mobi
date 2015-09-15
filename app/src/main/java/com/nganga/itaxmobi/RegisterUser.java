@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -16,9 +18,10 @@ import android.widget.Spinner;
 
 public class RegisterUser extends Activity implements AdapterView.OnItemSelectedListener{
 
-    protected void onCreate(Bundle savedInstanceState) {
 //        declared the spinner below
-        Spinner spinner;
+    Spinner spinner;
+    protected void onCreate(Bundle savedInstanceState) {
+
 
 //          assigned the spinner
         spinner = (Spinner) findViewById(R.id.employee_spinner);
@@ -27,11 +30,16 @@ public class RegisterUser extends Activity implements AdapterView.OnItemSelected
      ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.employee_array, android.R.layout.simple_spinner_item);
 
         spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
 
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+        // the toast notification didsplays what was selected
+        TextView myText= (TextView) view;
+        Toast.makeText(this,"You selected "+myText.getText(), Toast.LENGTH_SHORT).show();
 
     }
 
