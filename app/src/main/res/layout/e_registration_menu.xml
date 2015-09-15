@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:layout_weight="20"
-        android:id="@+id/e_registration_card"
+        android:id="@+id/e_amendment_card"
         android:clickable="true"
         android:layout_gravity="center"
         card_view:cardCornerRadius="4dp"
