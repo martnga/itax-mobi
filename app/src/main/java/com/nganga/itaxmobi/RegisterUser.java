@@ -21,6 +21,9 @@ public class RegisterUser extends Activity implements AdapterView.OnItemSelected
 //        declared the spinner below
     Spinner spinner;
     protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.register_user1);
 //          assigned the spinner
         spinner = (Spinner) findViewById(R.id.employee_spinner);
 

@@ -4,21 +4,21 @@
 
     <item
         android:id="@+id/passwordIcon"
-        android:title="@string/password"
+        android:title="password"
         android:icon="@drawable/password"
         android:showAsAction="ifRoom|withText"
         tools:ignore="AppCompatResource" />
 
     <item
         android:id="@+id/profileIcon"
-        android:title="@string/profile"
+        android:title="profile"
         android:icon="@drawable/profile"
         android:showAsAction="ifRoom|withText"
         tools:ignore="AppCompatResource" />
 
     <item
         android:id="@+id/ledgerIcon"
-        android:title="@string/ledger"
+        android:title="ledger"
         android:icon="@drawable/ledger"
         android:showAsAction="ifRoom|withText"
         tools:ignore="AppCompatResource" />
