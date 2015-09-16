@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.parse.Parse;
+import com.parse.ParseObject;
+
 /**
  * Created by nganga on 9/9/15.
  */
@@ -19,8 +22,6 @@ public class Login extends Activity{
     Button btnLogin,btnCancel;
     EditText pinText,passwordText;
 
-    TextView remainingAttemptsText;
-    int counter = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,29 +33,28 @@ public class Login extends Activity{
         passwordText=(EditText)findViewById(R.id.passwordText);
 
         btnCancel=(Button)findViewById(R.id.btnCancel);
-        remainingAttemptsText =(TextView)findViewById(R.id.remainingAttempts_text);
-        remainingAttemptsText.setVisibility(View.GONE);
+        // Enable Local Datastore.
+        Parse.enableLocalDatastore(this);
+
+        Parse.initialize(this, "b8uq0Pb9IV1pInQGFLpg9sUFj0RqZK8mgwfFjHXk", "f6mEQtCQGOFB0TnUfYdRkkR7u66uGIPwP6Lr3UUJ");
+
+
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(pinText.getText().toString().equals("admin") && passwordText.getText().toString().equals("admin")) {
 
+                    ParseObject testObject = new ParseObject("TestObject");
+                    testObject.put("foo", "bar");
+                    testObject.saveInBackground();
+
                     Intent i = new Intent(getApplicationContext(), Home.class);
                     startActivity(i);
 
                 }
                 else{
-                    Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
-
-                    remainingAttemptsText.setVisibility(View.VISIBLE);
-                    remainingAttemptsText.setBackgroundColor(Color.DKGRAY);
-                    counter--;
-                    remainingAttemptsText.setText(Integer.toString(counter));
-
-                    if (counter == 0) {
-                        btnLogin.setEnabled(false);
-                    }
+                    Toast.makeText(getApplicationContext(), "Wrong Credentials. Try Again",Toast.LENGTH_SHORT).show();
                 }
             }
         });

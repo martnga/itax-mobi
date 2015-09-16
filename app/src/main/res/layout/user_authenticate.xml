@@ -4,20 +4,23 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserAutheticate">
+    tools:context=".UserAutheticate"
+    android:background="#fdd">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop = "25dp"
-        android:text="Welcome to Itax Mobi. ">
+        android:textSize="35sp"
+        android:text="Welcome Human ">
     </TextView>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textSize="20sp"
         android:text="Tax just got simpler.">
     </TextView>
 
@@ -34,11 +37,13 @@
         android:layout_marginTop = "25dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dp"
-        card_view:cardBackgroundColor="#f44">
+        card_view:cardBackgroundColor="#f22">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColor="#fdd"
             android:gravity="center"
             android:text="Do you have a pin?">
         </TextView>
@@ -60,12 +65,15 @@
         card_view:cardCornerRadius="1dp"
         android:elevation="20dp"
         android:clickable="true"
-        card_view:cardBackgroundColor="#f44">
+        card_view:cardBackgroundColor="#f22">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:fontFamily="Open Sans"
+            android:textSize="20sp"
+            android:textColor="#fdd"
             android:text="Don't have a pin? Register Here.">
         </TextView>
 
