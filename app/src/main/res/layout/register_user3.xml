@@ -7,10 +7,9 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
         android:layout_marginTop="20dp"
         android:id="@+id/editText8"
-        android:text="Enter your mobile phone number.  "
+        android:hint="Enter your mobile phone number.  "
         android:paddingLeft="20dp"
         android:layout_weight="0.05"
         android:layout_gravity="center"

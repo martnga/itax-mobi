@@ -47,9 +47,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
         android:id="@+id/district"
-        android:text="Enter your district of residence."
+        android:hint="Enter your district of residence."
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.09" />
 

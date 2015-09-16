@@ -16,9 +16,8 @@ import android.widget.Toast;
 /**
  * Created by nganga on 9/11/15.
  */
-public class Home extends ActionBarActivity {
+public class Home extends Activity {
 
-    Toolbar toolbar;
     CardView e_returns_card;
     CardView e_registration_card;
     CardView e_payments_card;
@@ -27,9 +26,6 @@ public class Home extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
-
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
 
         e_returns_card = (CardView) findViewById(R.id.e_returns_card);
@@ -66,22 +62,6 @@ public class Home extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         super.onOptionsItemSelected(item);
-
-        switch(item.getItemId()){
-            case R.id.passwordIcon:
-                Toast.makeText(getBaseContext(), "TODO v2", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.profileIcon:
-                Toast.makeText(getBaseContext(), "TODO v2", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.ledgerIcon:
-                Toast.makeText(getBaseContext(), "TODO v2", Toast.LENGTH_SHORT).show();
-                break;
-
-
-        }
         return true;
 
     }

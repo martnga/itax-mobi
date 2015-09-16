@@ -17,9 +17,9 @@
     <!--national I.D. number-->
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/employee_spinner"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="500dp"
         android:spinnerMode="dialog"
         android:paddingLeft="20dp"
         />
