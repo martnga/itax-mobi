@@ -48,7 +48,7 @@ public class RegisterUser extends Activity implements AdapterView.OnItemSelected
             });
         }
 
-    }
+
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
