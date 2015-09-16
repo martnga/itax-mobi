@@ -21,13 +21,11 @@ public class RegisterUser extends Activity implements AdapterView.OnItemSelected
 //        declared the spinner below
     Spinner spinner;
     protected void onCreate(Bundle savedInstanceState) {
-
-
 //          assigned the spinner
         spinner = (Spinner) findViewById(R.id.employee_spinner);
 
 //        created the adapter that will handle the spinner
-     ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.employee_array, android.R.layout.simple_spinner_item);
+     ArrayAdapter adapter = ArrayAdapter.createFromResource(this,R.array.employee_array, android.R.layout.simple_spinner_item);
 
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
