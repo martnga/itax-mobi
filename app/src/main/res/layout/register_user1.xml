@@ -1,80 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/pin_registration">
 
-    <!--national I.D. number-->
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter National Id. Number"
-            android:id="@+id/id_number"
-            android:padding="20dp"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/editText4"
-            android:layout_alignParentLeft="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
-        android:id="@+id/birth1"
-        android:text="Enter your date of birth"
-        android:padding="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="107dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next Page"
-        android:id="@+id/page1"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="29dp" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
-        android:id="@+id/editText4"
-        android:text="Enter your tax area or locality"
-        android:layout_alignParentStart="true"
-        android:padding="20dp"
-        android:layout_below="@+id/birth1"
-        android:layout_alignParentLeft="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
-        android:id="@+id/editText5"
-        android:text="Enter your postal code"
-        android:layout_alignParentStart="true"
-        android:padding="20dp"
-        android:layout_below="@+id/editText6"
-        android:layout_alignParentLeft="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
-        android:id="@+id/editText6"
-        android:text="Enter your postal address town.  "
-        android:padding="20dp"
-        android:layout_below="@+id/id_number"
-        android:layout_alignParentLeft="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
-        android:id="@+id/editText7"
-        android:text="Enter your main e-mail address."
-        android:layout_alignBottom="@+id/editText5"
-        android:layout_toEndOf="@+id/editText5" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -85,15 +14,87 @@
         android:layout_alignParentTop="true"
         android:padding="20dp" />
 
+    <!--national I.D. number-->
+
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:spinnerMode="dropdown"
-        android:layout_below="@+id/editText5"
-        android:layout_alignEnd="@+id/page1" />
+        android:spinnerMode="dialog"
+        android:paddingLeft="20dp"
+        />
 
 
-</RelativeLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter National Id. Number"
+            android:id="@+id/id_number"
+            android:padding="20dp"
+             />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter National Id. Number"
+        android:id="@+id/birth1"
+        android:text="Enter your date of birth"
+        android:padding="20dp"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter National Id. Number"
+        android:id="@+id/editText4"
+        android:text="Enter your tax area or locality"
+        android:layout_alignParentStart="true"
+        android:padding="20dp"
+         />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter National Id. Number"
+        android:id="@+id/editText5"
+        android:text="Enter your postal code"
+        android:padding="20dp"
+        android:layout_below="@+id/editText6"
+         />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter National Id. Number"
+        android:id="@+id/editText6"
+        android:text="Enter your postal address town.  "
+        android:padding="20dp"
+         />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter National Id. Number"
+        android:id="@+id/editText7"
+        android:text="Enter your main e-mail address."
+        android:padding="20dp"
+         />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Next Page"
+        android:id="@+id/page1"
+        android:layout_marginBottom="29dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+
+        />
+
+
+</LinearLayout>
 
 
