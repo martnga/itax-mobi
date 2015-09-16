@@ -16,17 +16,17 @@
             android:hint="Enter National Id. Number"
             android:id="@+id/id_number"
             android:layout_below="@+id/employee_spinner"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/page1" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter National Id. Number"
         android:id="@+id/birth1"
-        android:layout_below="@+id/id_number"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="26dp"
-        android:text="Enter your date of birth" />
+        android:text="Enter your date of birth"
+        android:layout_alignBottom="@+id/id_number"
+        android:layout_toEndOf="@+id/id_number" />
 
     <EditText
         android:layout_width="match_parent"
@@ -34,18 +34,17 @@
         android:hint="Enter National Id. Number"
         android:id="@+id/residence1"
         android:text="Enter your street of residence"
-        android:layout_below="@+id/birth1"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="19dp" />
+        android:layout_below="@+id/id_number"
+        android:layout_alignEnd="@+id/page1" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter National Id. Number"
         android:id="@+id/editText"
-        android:text="Enter your town of residence."
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:text="Enter your town or city of residence."
+        android:layout_below="@+id/birth1"
+        android:layout_toEndOf="@+id/page1" />
 
     <EditText
         android:layout_width="match_parent"
@@ -76,6 +75,14 @@
         android:layout_marginTop="18dp"
         android:layout_below="@+id/editText3"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Page"
+        android:id="@+id/page1"
+        android:layout_below="@+id/district1"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
