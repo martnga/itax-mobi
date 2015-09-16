@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="ENTER YOUR RESIDENTIAL DETAILS BELOW"
-        android:id="@+id/textView4"
+        android:id="@+id/residentialDetails"
         android:layout_gravity="center_horizontal"
         android:layout_margin="30dp"
         android:layout_weight="0.09" />
@@ -17,29 +17,30 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
-        android:id="@+id/editText10"
-        android:text="Enter the street on which you live in"
-        android:layout_below="@+id/id_number"
-        android:layout_alignEnd="@+id/page1"
-        android:layout_alignBottom="@+id/editText"
+        android:id="@+id/street"
+        android:hint="Enter the street on which you live in"
         android:padding="18dp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter your town or city of residence."
-        android:layout_toEndOf="@+id/editText10"
+        android:id="@+id/town_city"
         android:padding="18dp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
-        android:id="@+id/editText"
-        android:text="Enter the name of the building that you live in"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/birth1"
+        android:id="@+id/building"
+        android:hint="Enter the name of the building that you live in"
+        android:layout_gravity="center_horizontal"
+         />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/county"
+        android:hint="Enter your county of residence "
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.09" />
 
@@ -47,19 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter National Id. Number"
-        android:id="@+id/editText2"
-        android:text="Enter your county of residence "
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/page1"
-        android:layout_below="@+id/birth1"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.09" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
-        android:id="@+id/editText3"
+        android:id="@+id/district"
         android:text="Enter your district of residence."
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.09" />
@@ -68,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT PAGE"
-        android:id="@+id/button4"
+        android:id="@+id/regTwoNextBtn"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.09" />
 

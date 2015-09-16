@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT PAGE"
-        android:id="@+id/button"
+        android:id="@+id/regThreeNextBtn"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.05" />
 
