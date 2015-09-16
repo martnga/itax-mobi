@@ -14,4 +14,12 @@
         app:theme="@style/iTaxTheme">
 
     </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:text="link your registration form here"
+        />
+
+
 </RelativeLayout>
