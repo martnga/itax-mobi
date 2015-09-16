@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/pin_registration">
@@ -16,9 +16,7 @@
             android:layout_height="wrap_content"
             android:hint="Enter National Id. Number"
             android:id="@+id/id_number"
-            android:layout_below="@+id/employee_spinner"
-            android:layout_alignParentStart="true"
-            android:layout_toStartOf="@+id/page1" />
+            />
 
     <EditText
         android:layout_width="match_parent"
@@ -26,8 +24,7 @@
         android:hint="Enter National Id. Number"
         android:id="@+id/birth1"
         android:text="Enter your date of birth"
-        android:layout_alignBottom="@+id/id_number"
-        android:layout_toEndOf="@+id/id_number" />
+         />
 
     <EditText
         android:layout_width="match_parent"
@@ -35,9 +32,7 @@
         android:hint="Enter National Id. Number"
         android:id="@+id/residence1"
         android:text="Enter the street on which you live in"
-        android:layout_below="@+id/id_number"
-        android:layout_alignEnd="@+id/page1"
-        android:layout_alignBottom="@+id/editText" />
+         />
 
     <EditText
         android:layout_width="match_parent"
@@ -45,8 +40,7 @@
         android:hint="Enter National Id. Number"
         android:id="@+id/editText"
         android:text="Enter your town or city of residence."
-        android:layout_below="@+id/birth1"
-        android:layout_toEndOf="@+id/page1" />
+        />
 
     <EditText
         android:layout_width="match_parent"
@@ -54,8 +48,7 @@
         android:hint="Enter National Id. Number"
         android:id="@+id/editText2"
         android:text="Enter the name of the building that you live in"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentStart="true" />
+        />
 
     <EditText
         android:layout_width="match_parent"
@@ -63,9 +56,7 @@
         android:hint="Enter National Id. Number"
         android:id="@+id/editText3"
         android:text="Enter your county of residence "
-        android:layout_below="@+id/editText2"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/page1" />
+        />
 
     <EditText
         android:layout_width="match_parent"
@@ -73,8 +64,42 @@
         android:hint="Enter National Id. Number"
         android:id="@+id/district1"
         android:text="Enter your district of residence."
-        android:layout_alignBottom="@+id/editText3"
-        android:layout_toEndOf="@+id/editText3" />
+        />
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter National Id. Number"
+        android:id="@+id/editText4"
+        android:text="Enter your tax area or locality"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter National Id. Number"
+        android:id="@+id/editText5"
+        android:text="Enter your postal code"
+         />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter National Id. Number"
+        android:id="@+id/editText6"
+        android:text="Enter your postal address town.  "
+         />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter National Id. Number"
+        android:id="@+id/editText7"
+        android:text="Enter your main e-mail address."
+         />
 
     <Button
         android:layout_width="wrap_content"
@@ -85,46 +110,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="29dp" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
-        android:id="@+id/editText4"
-        android:text="Enter your tax area or locality"
-        android:layout_below="@+id/editText3"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/editText"
-        android:layout_alignEnd="@+id/editText3" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
-        android:id="@+id/editText5"
-        android:text="Enter your postal code"
-        android:layout_below="@+id/editText4"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/editText4" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
-        android:id="@+id/editText6"
-        android:text="Enter your postal address town.  "
-        android:layout_above="@+id/editText5"
-        android:layout_toEndOf="@+id/editText3" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
-        android:id="@+id/editText7"
-        android:text="Enter your main e-mail address."
-        android:layout_alignBottom="@+id/editText5"
-        android:layout_toEndOf="@+id/editText5" />
-
-
-</RelativeLayout>
+</LinearLayout>
 
 
