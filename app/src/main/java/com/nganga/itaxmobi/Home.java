@@ -25,7 +25,7 @@ public class Home extends Activity {
        e_payments_card = (CardView) findViewById(R.id.e_returns_card);
        e_registration_card = (CardView) findViewById(R.id.e_registration_card);
 
-//        setting background color
+//
 
         e_returns_card.setOnClickListener(new View.OnClickListener() {
             @Override
