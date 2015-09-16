@@ -68,7 +68,7 @@
         android:textColor="#dd1212"
         android:id="@+id/btnCancel"
         android:layout_marginTop="25dp"
-         android:layout_marginLeft="100dp"
+        android:layout_marginLeft="75dp"
         android:layout_below="@+id/passwordText"
         android:layout_toRightOf="@+id/btnLogin"
         android:background="@drawable/button_border"

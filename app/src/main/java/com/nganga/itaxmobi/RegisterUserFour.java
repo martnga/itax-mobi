@@ -13,8 +13,8 @@ public class RegisterUserFour extends Activity {
 
     Button next;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_user4);
 
@@ -22,9 +22,10 @@ public class RegisterUserFour extends Activity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), RegisterUserFive.class);
+                Intent i = new Intent(getApplicationContext(), RegisterUserFour.class);
                 startActivity(i);
             }
         });
+
     }
 }

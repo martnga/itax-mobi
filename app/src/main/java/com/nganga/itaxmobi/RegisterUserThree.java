@@ -13,8 +13,8 @@ public class RegisterUserThree extends Activity {
 
     Button next;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_user3);
 
@@ -26,5 +26,6 @@ public class RegisterUserThree extends Activity {
                 startActivity(i);
             }
         });
+
     }
 }

@@ -13,12 +13,12 @@ public class RegisterUserTwo extends Activity {
 
     Button next;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_user2);
 
-        next = (Button) findViewById(R.id.regOneNextBtn);
+        next = (Button) findViewById(R.id.regTwoNextBtn);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,5 +26,6 @@ public class RegisterUserTwo extends Activity {
                 startActivity(i);
             }
         });
+
     }
 }

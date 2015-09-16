@@ -3,6 +3,7 @@ package com.nganga.itaxmobi;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 public class RegisterUser extends Activity implements AdapterView.OnItemSelectedListener{
 
     Button next;
+
 //        declared the spinner below
     Spinner spinner;
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +39,7 @@ public class RegisterUser extends Activity implements AdapterView.OnItemSelected
         spinner.setOnItemSelectedListener(this);
 
 
-
-            next = (Button) findViewById(R.id.regOneNextBtn);
+            next= (Button) findViewById(R.id.regOneNextBtn);
             next.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -46,9 +47,8 @@ public class RegisterUser extends Activity implements AdapterView.OnItemSelected
                     startActivity(i);
                 }
             });
-        }
 
-
+    }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
