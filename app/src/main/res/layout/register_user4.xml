@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT PAGE"
-        android:id="@+id/button2"
+        android:id="@+id/regFourNextBtn"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.04" />
 </LinearLayout>

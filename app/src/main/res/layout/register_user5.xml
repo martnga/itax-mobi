@@ -7,18 +7,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Lastly enter your employers pin below."
+        android:text="Enter your employers pin below."
         android:id="@+id/textView3"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:padding="20dp"
         android:singleLine="false"
         android:textIsSelectable="false" />
 
     <EditText
-        android:layout_width="252dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Employees PIN"
-        android:id="@+id/editText9"
+        android:id="@+id/employeesPin"
+        android:gravity="center"
         android:layout_gravity="center_horizontal"
         android:padding="35dp" />
 
@@ -26,7 +28,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="REGISTER  ME!"
-        android:id="@+id/button3"
+        android:layout_marginTop="20dp"
+        android:id="@+id/registerUserBtn"
         android:layout_gravity="center_horizontal"
         android:padding="25dp"
         android:clickable="false" />
