@@ -86,12 +86,21 @@
         android:padding="20dp" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/employee_spinner"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:spinnerMode="dropdown"
         android:layout_below="@+id/editText5"
         android:layout_alignEnd="@+id/page1" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT PAGE"
+        android:id="@+id/regONextBtn"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.09" />
 
 
 </RelativeLayout>
