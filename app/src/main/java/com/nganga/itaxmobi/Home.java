@@ -49,6 +49,14 @@ public class Home extends Activity {
                 startActivity(i);
             }
         });
+
+        e_payments_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), E_PaymentsMenu.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
