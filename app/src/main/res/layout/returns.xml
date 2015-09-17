@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/one"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="@string/two"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="@string/three"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="@string/four"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="@string/five"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/downloadFormBtn"
+        android:layout_marginTop="10dp"
+        android:text="Download "
+        android:layout_gravity="center"/>
+
+
+    <Spinner
+        android:id="@+id/type_of_returns_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:layout_marginTop="7dp"
+        android:paddingLeft="20dp"
+        />
+
+
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Return Period From"
+    android:id="@+id/return_period_from"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal"
+    android:padding="25dp" />
+
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Returns period to"
+    android:id="@+id/return_period_to"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal"
+    android:padding="25dp" />
+
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="upload form"
+    android:id="@+id/upload_returns_form"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal"
+    android:padding="25dp" />
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Submit"
+    android:layout_marginTop="20dp"
+    android:id="@+id/registerUserBtn"
+    android:layout_gravity="center_horizontal"
+    android:padding="25dp"
+    android:clickable="false" />
+</LinearLayout>

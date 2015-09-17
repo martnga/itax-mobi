@@ -29,7 +29,7 @@ public class Home extends Activity {
 
 
         e_returns_card = (CardView) findViewById(R.id.e_returns_card);
-       e_payments_card = (CardView) findViewById(R.id.e_returns_card);
+       e_payments_card = (CardView) findViewById(R.id.e_payments_card);
        e_registration_card = (CardView) findViewById(R.id.e_registration_card);
 
 //        setting background color

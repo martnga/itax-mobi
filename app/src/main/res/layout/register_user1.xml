@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="BEGIN BY ENTERING YOUR PERSONAL DETAILS BELOW"
+        android:text="ENTER YOUR PERSONAL DETAILS"
         android:id="@+id/textView5"
         android:layout_alignParentTop="true"
         android:padding="20dp" />
@@ -81,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
-        android:text="Next Page"
+        android:text="Next"
         android:id="@+id/regOneNextBtn"
         android:layout_marginBottom="29dp"
         android:layout_gravity="center"

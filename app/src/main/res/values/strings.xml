@@ -3,8 +3,14 @@
     <string name="edit_message">ITax Mobi</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="one">1. Download the P9 Returns form</string>
+    <string name="two">2. Fill the P9 Return form</string>
+    <string name="three">3. Provide the details requested below</string>
+    <string name="four">4. Upload the Return form using Browse button</string>
+    <string name="five">5. Click on submit to file your Tax returns</string>
 
     <string-array name="employee_array">
+        <item>Select Your Profession</item>
         <item>Accountants</item>
         <item>Architects Quantity Surveyors</item>
         <item>Certified Public Secretaries</item>
@@ -17,7 +23,14 @@
         <item>Veterinary Surgeons Veterinary</item>
     </string-array>
 
+    <string-array name="type_of_returns_array">
+        <item>Select Type of Return</item>
+        <item>Original</item>
+        <item>Ammend</item>
+    </string-array>
+
     <string-array name="county">
+        <item>Select Your County</item>
         <item>Baringo</item>
         <item>Bungoma</item>
         <item>Busia</item>
@@ -54,5 +67,7 @@
         <item>WAJIR</item>
         <item>WEST POKOT</item>
     </string-array>
+
+
 
 </resources>
