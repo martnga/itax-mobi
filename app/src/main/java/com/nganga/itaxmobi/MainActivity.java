@@ -1,14 +1,16 @@
 package com.nganga.itaxmobi;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.manuelpeinado.fadingactionbar.FadingActionBarHelper;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     Toolbar toolbar;
 
@@ -18,9 +20,12 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        the code below replaces the shitty default android toolbar with the material one from the super class above
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        FadingActionBarHelper helper = new FadingActionBarHelper()
+                .actionBarBackground(R.drawable.kra_itax)
+                .headerLayout(R.layout.toolbar)
+                .contentLayout(R.layout.activity_main);
+        setContentView(helper.createView(this));
+        helper.initActionBar(this);
 
     }
 
