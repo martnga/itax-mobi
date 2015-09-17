@@ -9,6 +9,10 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
+
 /**
  * Created by nganga on 9/17/15.
  */
@@ -38,9 +42,9 @@ public class RegisterUserFive extends Activity {
         setContentView(R.layout.register_user5);
 
         // Initialised the above.
-        mIdNumber = (EditText)findViewById(R.id.id_number);
-        mBirthDate = (EditText)findViewById(R.id.birth1);
-        mTaxArea = (EditText)findViewById(R.id.localityText);
+        mIdNumber = (EditText) findViewById(R.id.id_number);
+        mBirthDate = (EditText) findViewById(R.id.birth1);
+        mTaxArea = (EditText) findViewById(R.id.localityText);
         mPostalCode = (EditText)findViewById(R.id.postCode);
         mPostalTown = (EditText)findViewById(R.id.postal_address_town);
         mEmail = (EditText)findViewById(R.id.email);
@@ -51,13 +55,12 @@ public class RegisterUserFive extends Activity {
         mDistrict = (EditText)findViewById(R.id.district);
         mPhoneNumber = (EditText)findViewById(R.id.editText8);
         mEmployeesPin = (EditText)findViewById(R.id.employeesPin);
-        mPaye = (RadioButton) findViewById(R.id.payeRadio);
-        mIncomeTax = (RadioButton) findViewById(R.id.incomeTaxRadio);
-        mRegisterUser = (Button)findViewById(R.id.registerUserBtn);
+     mPaye = (RadioButton) findViewById(R.id.payeRadio);
+      mIncomeTax = (RadioButton) findViewById(R.id.incomeTaxRadio);
 
 
-       registerUser = (Button) findViewById(R.id.registerUserBtn);
-        registerUser.setOnClickListener(new View.OnClickListener() {
+       mRegisterUser = (Button) findViewById(R.id.registerUserBtn);
+        mRegisterUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Home.class);
@@ -69,9 +72,61 @@ public class RegisterUserFive extends Activity {
         mRegisterUser.setOnClickListener(new View.OnClickListener(){
             @Override
         public void onClick(View view){
-                // There is a toast notification below
 
-                Toast.makeText(RegisterUserFive.this, "Registered", Toast.LENGTH_LONG).show();
+                //collect the user data and converts it to a string and removes extra spacing
+               String IdNumber = mIdNumber.getText().toString().trim();
+               String BirthDate = mBirthDate.getText().toString().trim();
+                String TaxArea = mTaxArea.getText().toString().trim();
+                String PostalCode = mPostalCode.getText().toString().trim();
+                String PostalTown = mPostalTown.getText().toString().trim();
+                String Email = mEmail.getText().toString().trim();
+                String Street = mStreet.getText().toString().trim();
+                String Town = mTown.getText().toString().trim();
+                String Building = mBuilding.getText().toString().trim();
+                String County = mCounty.getText().toString().trim();
+                String District = mDistrict.getText().toString().trim();
+                String PhoneNumber = mPhoneNumber.getText().toString().trim();
+                String EmployeesPin = mEmployeesPin.getText().toString().trim();
+
+
+
+                //Store the data in parse
+                ParseUser user = new ParseUser();
+                user.setUsername("my name");
+                user.setPassword("my pass");
+                user.setEmail("email@example.com");
+
+// other fields can be set just like with ParseObject
+              user.put("id_number", IdNumber);
+//                user.put("Birth Date", BirthDate);
+//                user.put("Tax Area", TaxArea);
+                user.put("Postal Code", PostalCode);
+                user.put("Postal Town", PostalTown);
+                user.put("Email", Email);
+                user.put("Street", Street);
+                user.put("Town", Town);
+                user.put("Building", Building);
+                user.put("County ", County );
+                user.put("District", District);
+                user.put("Phone Number",  PhoneNumber);
+                user.put("Employees Pin", EmployeesPin);
+
+
+                // the code below checks if the user signed up successfully
+                user.signUpInBackground(new SignUpCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        if (e == null){
+                            // user signed up successfully
+
+                            // There is a toast notification below
+                            Toast.makeText(RegisterUserFive.this, "Registered", Toast.LENGTH_LONG).show();
+                        }else{
+                            // error signing up user
+                        }
+                    }
+                });
+
             }
         });
     }
