@@ -5,7 +5,7 @@
 
         <!--customize your stuff below-->
 
-       <item name="colorPrimary">#f00</item>
+       <item name="colorPrimary">#333333</item>
        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
        <item name="android:colorButtonNormal">@color/colorButtonNormal</item>

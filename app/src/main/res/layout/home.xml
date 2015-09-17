@@ -4,6 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f44"
     tools:context=".Home">
 
 
@@ -15,19 +16,19 @@
         android:id="@+id/e_registration_card"
         android:clickable="true"
         android:layout_gravity="center"
-        card_view:cardCornerRadius="4dp"
+        card_view:cardCornerRadius="0dp"
         android:elevation="20dp"
         android:layout_marginTop = "15dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dp"
-        card_view:cardBackgroundColor="#f44">
+        card_view:cardBackgroundColor="#f55">
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="22sp"
+            android:textSize="27sp"
             android:layout_marginTop = "15dp"
             android:text="e-Registration">
         </TextView>
@@ -51,22 +52,23 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="30"
+        android:layout_below="@id/e_registration_card"
         android:clickable="true"
         android:id="@+id/e_returns_card"
         android:layout_marginTop = "15dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dip"
         android:layout_gravity="center"
-        card_view:cardCornerRadius="2dp"
+        card_view:cardCornerRadius="0dp"
         android:elevation="20dp"
-        card_view:cardBackgroundColor="#f44">
+        card_view:cardBackgroundColor="#f55">
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="22sp"
+            android:textSize="27sp"
             android:layout_marginTop = "15dp"
             android:text="e-Returns">
         </TextView>
@@ -91,6 +93,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="30"
+        android:layout_below="@id/e_returns_card"
         android:clickable="true"
         android:id="@+id/e_payments_card"
         android:layout_marginTop = "15dp"
@@ -98,15 +101,15 @@
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dip"
         android:layout_gravity="center"
-        card_view:cardCornerRadius="2dp"
+        card_view:cardCornerRadius="0dp"
         android:elevation="20dp"
-        card_view:cardBackgroundColor="#f44">
+        card_view:cardBackgroundColor="#f55">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="22sp"
+            android:textSize="27sp"
             android:layout_marginTop = "15dp"
             android:text="e-Payments">
         </TextView>

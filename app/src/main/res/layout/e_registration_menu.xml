@@ -4,6 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f44"
     tools:context=".Home">
 
 
@@ -15,12 +16,12 @@
         android:id="@+id/e_registration_card"
         android:clickable="true"
         android:layout_gravity="center"
-        card_view:cardCornerRadius="4dp"
+        card_view:cardCornerRadius="0dp"
         android:elevation="20dp"
         android:layout_marginTop = "15dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dp"
-        card_view:cardBackgroundColor="#ddd">
+        card_view:cardBackgroundColor="#f55">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -51,6 +52,7 @@
                 android:text="Edit Your Registration Details."
                 android:gravity="center"
                 android:textSize="20sp"
+                android:textColor="#fff"
                 />
 
         </RelativeLayout>
@@ -72,9 +74,9 @@
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dip"
         android:layout_gravity="center"
-        card_view:cardCornerRadius="2dp"
+        card_view:cardCornerRadius="0dp"
         android:elevation="20dp"
-        card_view:cardBackgroundColor="#ddd">
+        card_view:cardBackgroundColor="#f55">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -105,6 +107,7 @@
                 android:text="Cancel your iTax Account"
                 android:gravity="center"
                 android:textSize="20sp"
+                android:textColor="#fff"
                 />
 
         </RelativeLayout>
@@ -127,9 +130,9 @@
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dip"
         android:layout_gravity="center"
-        card_view:cardCornerRadius="2dp"
+        card_view:cardCornerRadius="0dp"
         android:elevation="20dp"
-        card_view:cardBackgroundColor="#ddd">
+        card_view:cardBackgroundColor="#f55">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -160,6 +163,7 @@
                 android:text="Account for Deferred Tax Returns "
                 android:gravity="center"
                 android:textSize="20sp"
+                android:textColor="#fff"
                 />
 
         </RelativeLayout>

@@ -4,14 +4,15 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * Created by nganga on 9/14/15.
+ * Created by nganga on 9/17/15.
  */
-public class E_RegistrationMenu  extends Activity{
+public class E_PaymentsMenu  extends Activity{
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.e_registration_menu);
+        setContentView(R.layout.e_payments_menu);
 
 
     }

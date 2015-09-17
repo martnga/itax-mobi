@@ -5,14 +5,14 @@
     android:weightSum="1">
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter National Id. Number"
+        android:layout_marginTop="20dp"
         android:id="@+id/editText8"
-        android:text="Enter your mobile phone number.  "
-        android:layout_above="@+id/editText5"
-        android:layout_toEndOf="@+id/editText3"
+        android:hint="Enter your mobile phone number.  "
+        android:paddingLeft="20dp"
         android:layout_weight="0.05"
+        android:layout_gravity="center"
         android:textAlignment="center" />
 
     <TextView
@@ -21,32 +21,39 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Select the type of tax you will pay below"
         android:id="@+id/textView"
-        android:layout_gravity="center_horizontal"
         android:layout_weight="0.05"
+        android:layout_marginLeft="20dp"
         android:padding="10dp" />
 
     <RadioButton
-        android:layout_width="205dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="PAYE"
-        android:id="@+id/radioButton2"
+        android:id="@+id/payeRadio"
         android:layout_weight="0.05"
+        android:layout_marginLeft="20dp"
         android:checked="false" />
 
     <RadioButton
-        android:layout_width="160dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Income Tax "
-        android:id="@+id/radioButton"
+        android:text="INCOME TAX"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/incomeTaxRadio"
         android:layout_weight="0.05"
         android:checked="false" />
 
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="NEXT PAGE"
-        android:id="@+id/button"
+        android:text="Next"
+        android:textSize="17sp"
+        android:textColor="#dd1212"
+        android:id="@+id/regThreeNextBtn"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.05" />
+        android:layout_marginTop="65dp"
+        android:background="@drawable/button_border"
+        />
 
 </LinearLayout>

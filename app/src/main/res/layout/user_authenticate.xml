@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserAutheticate"
-    android:background="#fdd">
+    android:background="#f44">
 
     <TextView
         android:layout_width="match_parent"
@@ -31,19 +31,21 @@
         android:layout_weight="25"
         android:id="@+id/login_card"
         android:layout_gravity="center"
-        card_view:cardCornerRadius="1dp"
+        card_view:cardCornerRadius="0dp"
         android:elevation="20dp"
         android:clickable="true"
         android:layout_marginTop = "25dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dp"
-        card_view:cardBackgroundColor="#f22">
+        card_view:cardBackgroundColor="#f55">
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="Open Sans"
             android:textSize="20sp"
-            android:textColor="#fdd"
+            android:textColor="#fff"
             android:gravity="center"
             android:text="Do you have a pin?">
         </TextView>
@@ -63,9 +65,9 @@
         android:layout_marginRight = "15dip"
         android:layout_gravity="center"
         card_view:cardCornerRadius="1dp"
-        android:elevation="20dp"
+        android:elevation="30dp"
         android:clickable="true"
-        card_view:cardBackgroundColor="#f22">
+        card_view:cardBackgroundColor="#f55">
 
         <TextView
             android:layout_width="match_parent"
@@ -73,7 +75,7 @@
             android:gravity="center"
             android:fontFamily="Open Sans"
             android:textSize="20sp"
-            android:textColor="#fdd"
+            android:textColor="#fff"
             android:text="Don't have a pin? Register Here.">
         </TextView>
 

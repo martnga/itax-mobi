@@ -16,9 +16,8 @@ import android.widget.Toast;
 /**
  * Created by nganga on 9/11/15.
  */
-public class Home extends ActionBarActivity {
+public class Home extends Activity {
 
-    Toolbar toolbar;
     CardView e_returns_card;
     CardView e_registration_card;
     CardView e_payments_card;
@@ -28,12 +27,9 @@ public class Home extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
 
         e_returns_card = (CardView) findViewById(R.id.e_returns_card);
-       e_payments_card = (CardView) findViewById(R.id.e_returns_card);
+       e_payments_card = (CardView) findViewById(R.id.e_payments_card);
        e_registration_card = (CardView) findViewById(R.id.e_registration_card);
 
 //        setting background color
@@ -53,6 +49,14 @@ public class Home extends ActionBarActivity {
                 startActivity(i);
             }
         });
+
+        e_payments_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), E_PaymentsMenu.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -66,22 +70,6 @@ public class Home extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         super.onOptionsItemSelected(item);
-
-        switch(item.getItemId()){
-            case R.id.passwordIcon:
-                Toast.makeText(getBaseContext(), "TODO v2", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.profileIcon:
-                Toast.makeText(getBaseContext(), "TODO v2", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.ledgerIcon:
-                Toast.makeText(getBaseContext(), "TODO v2", Toast.LENGTH_SHORT).show();
-                break;
-
-
-        }
         return true;
 
     }
