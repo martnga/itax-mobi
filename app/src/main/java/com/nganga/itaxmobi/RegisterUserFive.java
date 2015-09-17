@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 /**
  * Created by nganga on 9/17/15.
@@ -28,7 +29,7 @@ public class RegisterUserFive extends Activity {
     protected EditText mEmployeesPin;
     protected RadioButton mPaye;
     protected RadioButton mIncomeTax;
-    protected Button mregisterUser;
+    protected Button mRegisterUser;
     Button registerUser;
 
     @Override
@@ -52,7 +53,7 @@ public class RegisterUserFive extends Activity {
         mEmployeesPin = (EditText)findViewById(R.id.employeesPin);
         mPaye = (RadioButton) findViewById(R.id.payeRadio);
         mIncomeTax = (RadioButton) findViewById(R.id.incomeTaxRadio);
-        mregisterUser = (Button)findViewById(R.id.registerUserBtn);
+        mRegisterUser = (Button)findViewById(R.id.registerUserBtn);
 
 
        registerUser = (Button) findViewById(R.id.registerUserBtn);
@@ -61,6 +62,16 @@ public class RegisterUserFive extends Activity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Home.class);
                 startActivity(i);
+            }
+        });
+
+//        listens to the register button
+        mRegisterUser.setOnClickListener(new View.OnClickListener(){
+            @Override
+        public void onClick(View view){
+                // There is a toast notification below
+
+                Toast.makeText(RegisterUserFive.this, "Registered", Toast.LENGTH_LONG).show();
             }
         });
     }
