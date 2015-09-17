@@ -22,6 +22,8 @@
         android:layout_height="wrap_content"
         android:spinnerMode="dialog"
         android:paddingLeft="20dp"
+        android:prompt="@string/select_profession"
+        android:entries="@array/employee_array"
         />
 
 

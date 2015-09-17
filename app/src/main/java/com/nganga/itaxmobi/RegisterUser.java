@@ -30,13 +30,13 @@ public class RegisterUser extends Activity implements AdapterView.OnItemSelected
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_user1);
 //          assigned the spinner
-        spinner = (Spinner) findViewById(R.id.employee_spinner);
-
-//        created the adapter that will handle the spinner
-     ArrayAdapter adapter = ArrayAdapter.createFromResource(this,R.array.employee_array, android.R.layout.simple_spinner_item);
-
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
+//        spinner = (Spinner) findViewById(R.id.employee_spinner);
+//
+////        created the adapter that will handle the spinner
+//     ArrayAdapter adapter = ArrayAdapter.createFromResource(this,R.array.employee_array, android.R.layout.simple_spinner_item);
+//
+//        spinner.setAdapter(adapter);
+//        spinner.setOnItemSelectedListener(this);
 
 
             next= (Button) findViewById(R.id.regOneNextBtn);

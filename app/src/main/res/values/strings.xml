@@ -8,9 +8,11 @@
     <string name="three">3. Provide the details requested below</string>
     <string name="four">4. Upload the Return form using Browse button</string>
     <string name="five">5. Click on submit to file your Tax returns</string>
+    <string name="select_profession">Select Your Profession</string>
+    <string name="select_returns_type">Select Type of Return</string>
+    <string name="select_county">Select Your County</string>
 
     <string-array name="employee_array">
-        <item>Select Your Profession</item>
         <item>Accountants</item>
         <item>Architects Quantity Surveyors</item>
         <item>Certified Public Secretaries</item>
@@ -24,13 +26,11 @@
     </string-array>
 
     <string-array name="type_of_returns_array">
-        <item>Select Type of Return</item>
         <item>Original</item>
         <item>Ammend</item>
     </string-array>
 
     <string-array name="county">
-        <item>Select Your County</item>
         <item>Baringo</item>
         <item>Bungoma</item>
         <item>Busia</item>
