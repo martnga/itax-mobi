@@ -14,11 +14,10 @@ import android.widget.Toast;
 /**
  * Created by nganga on 9/15/15.
  */
-public class Returns extends Activity implements AdapterView.OnItemSelectedListener {
+public class Returns extends Activity  {
 
-    Spinner spinner;
     Button download;
-
+    protected Spinner mreturnsType;
 
 
 
@@ -44,17 +43,11 @@ public class Returns extends Activity implements AdapterView.OnItemSelectedListe
            }
        });
 
+        mreturnsType = (Spinner)findViewById(R.id.type_of_returns_spinner);
+        String returnsType = mreturnsType.getSelectedItem().toString().trim();
 
 
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        // the toast notification displays what was selected
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
+
 }

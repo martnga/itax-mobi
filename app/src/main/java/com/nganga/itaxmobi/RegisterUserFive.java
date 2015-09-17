@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.parse.ParseException;
@@ -27,13 +28,14 @@ public class RegisterUserFive extends Activity {
     protected EditText mStreet;
     protected EditText mTown;
     protected EditText mBuilding;
-    protected EditText mCounty;
+    protected Spinner mCounty;
     protected EditText mDistrict;
     protected EditText mPhoneNumber;
     protected EditText mEmployeesPin;
     protected RadioButton mPaye;
     protected RadioButton mIncomeTax;
     protected Button mRegisterUser;
+    protected Spinner mEmployeeProfession;
     Button registerUser;
 
     @Override
@@ -51,7 +53,8 @@ public class RegisterUserFive extends Activity {
         mStreet = (EditText)findViewById(R.id.street);
         mTown = (EditText)findViewById(R.id.town_city);
         mBuilding = (EditText)findViewById(R.id.building);
-        mCounty = (EditText)findViewById(R.id.county);
+        mCounty = (Spinner)findViewById(R.id.county);
+        mEmployeeProfession = (Spinner)findViewById(R.id.employee_spinner);
         mDistrict = (EditText)findViewById(R.id.district);
         mPhoneNumber = (EditText)findViewById(R.id.editText8);
         mEmployeesPin = (EditText)findViewById(R.id.employeesPin);
@@ -83,7 +86,8 @@ public class RegisterUserFive extends Activity {
                 String Street = mStreet.getText().toString().trim();
                 String Town = mTown.getText().toString().trim();
                 String Building = mBuilding.getText().toString().trim();
-                String County = mCounty.getText().toString().trim();
+                String County = mCounty.getSelectedItem().toString().trim();
+                String Employee = mEmployeeProfession.getSelectedItem().toString().trim();
                 String District = mDistrict.getText().toString().trim();
                 String PhoneNumber = mPhoneNumber.getText().toString().trim();
                 String EmployeesPin = mEmployeesPin.getText().toString().trim();
