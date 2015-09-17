@@ -19,6 +19,9 @@ public class Returns extends Activity implements AdapterView.OnItemSelectedListe
     Spinner spinner;
     Button download;
 
+
+
+
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -48,8 +51,6 @@ public class Returns extends Activity implements AdapterView.OnItemSelectedListe
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         // the toast notification displays what was selected
-        TextView myText= (TextView) view;
-        Toast.makeText(this,"You selected "+myText.getText(), Toast.LENGTH_SHORT).show();
     }
 
     @Override

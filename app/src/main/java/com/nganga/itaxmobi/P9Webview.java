@@ -10,7 +10,7 @@ import android.webkit.WebViewClient;
  */
 public class P9Webview extends Activity {
 
-    String url = "http://www.docspal.com/viewer?id=nfmkcfuf-8343511";
+    String url = "http://ge.tt/api/1/files/5d0ot3O2/0/blob?download";
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -25,7 +25,7 @@ public class P9Webview extends Activity {
     private class MyBrowser extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            url = "http://www.docspal.com/viewer?id=nfmkcfuf-8343511";
+            url = "http://ge.tt/api/1/files/5d0ot3O2/0/blob?download";
             view.loadUrl(url);
             return true;
         }

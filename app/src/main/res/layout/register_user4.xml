@@ -21,11 +21,16 @@
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.04" />
 
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="NEXT PAGE"
+        android:text="Next"
+        android:textSize="17sp"
+        android:textColor="#dd1212"
         android:id="@+id/regFourNextBtn"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.04" />
+        android:layout_marginTop="45dp"
+        android:background="@drawable/button_border"
+        />
 </LinearLayout>

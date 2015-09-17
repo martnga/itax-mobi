@@ -33,13 +33,18 @@ android:layout_height="match_parent">
         android:layout_marginTop="7dp"
         android:text="@string/five"/>
 
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
+        android:text="Download"
+        android:textSize="17sp"
+        android:textColor="#333"
         android:id="@+id/downloadFormBtn"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:text="Download "
-        android:layout_gravity="center"/>
+        android:background="@drawable/button_border"
+        />
 
 
     <Spinner
@@ -80,13 +85,17 @@ android:layout_height="match_parent">
     android:layout_gravity="center_horizontal"
     android:padding="25dp" />
 
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Submit"
-    android:layout_marginTop="20dp"
-    android:id="@+id/registerUserBtn"
-    android:layout_gravity="center_horizontal"
-    android:padding="25dp"
-    android:clickable="false" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textSize="17sp"
+        android:textColor="#dd1212"
+        android:id="@+id/registerUserBtn"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_border"
+        />
+
 </LinearLayout>
