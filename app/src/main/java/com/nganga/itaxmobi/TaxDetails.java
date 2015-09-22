@@ -2,12 +2,14 @@ package com.nganga.itaxmobi;
 
 import android.app.Activity;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.nganga.itaxmobi.DatePicker.DateDialog;
 
@@ -32,16 +34,30 @@ public class TaxDetails extends Activity {
         mTaxType = (Spinner)findViewById(R.id.taxTypeSpinner);
 
 
-        String EmployeesPin = mEmployeesPin.getText().toString().trim();
-        String RegistrationDate = mRegistrationDate.getText().toString().trim();
-        String TaxType = mTaxType.getSelectedItem().toString().trim();
+        final String employeesPin = mEmployeesPin.getText().toString().trim();
+        final String registrationDate = mRegistrationDate.getText().toString().trim();
+        final String taxType = mTaxType.getSelectedItem().toString().trim();
 
         mRegisterUser = (Button) findViewById(R.id.registerUserBtn);
         mRegisterUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), Home.class);
-                startActivity(i);
+
+                if( employeesPin != null && registrationDate != null && taxType != null){
+
+                    Intent i = new Intent(getApplicationContext(), Home.class);
+                    startActivity(i);
+
+
+                }else{
+
+                    Context context = getApplicationContext();
+                    CharSequence text = "Please Fill in All Fields To Proceed";
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+                }
             }
         });
 

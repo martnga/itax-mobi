@@ -1,6 +1,7 @@
 package com.nganga.itaxmobi;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 /**
  * Created by nganga on 9/17/15.
@@ -40,11 +42,11 @@ public class ResidentialDetails extends Activity  implements AdapterView.OnItemS
 
 
 
-        String Street = mStreet.getText().toString().trim();
-        String Town = mTownCity.getText().toString().trim();
-        String Building = mBuilding.getText().toString().trim();
-        String County = mCounty.getSelectedItem().toString().trim();
-        String District = mDistrict.getText().toString().trim();
+        final String street = mStreet.getText().toString().trim();
+        final String town = mTownCity.getText().toString().trim();
+        final String building = mBuilding.getText().toString().trim();
+        final String county = mCounty.getSelectedItem().toString().trim();
+        final String district = mDistrict.getText().toString().trim();
 
 
 
@@ -53,8 +55,23 @@ public class ResidentialDetails extends Activity  implements AdapterView.OnItemS
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), TaxDetails.class);
-                startActivity(i);
+
+
+                if( street != null && town != null && building != null &&
+                        district != null && county != null){
+
+                    Intent i = new Intent(getApplicationContext(), TaxDetails.class);
+                    startActivity(i);
+
+                }else{
+
+                    Context context = getApplicationContext();
+                    CharSequence text = "Please Fill in All Fields To Proceed";
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+                }
             }
         });
 

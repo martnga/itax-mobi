@@ -26,13 +26,7 @@ public class Returns extends Activity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.returns);
 
-//        spinner = (Spinner) findViewById(R.id.type_of_returns_spinner);
-//
-////        created the adapter that will handle the spinner
-//        ArrayAdapter adapter = ArrayAdapter.createFromResource(this,R.array.type_of_returns_array, android.R.layout.simple_spinner_item);
-//
-//        spinner.setAdapter(adapter);
-//        spinner.setOnItemSelectedListener(this);
+
 
         download= (Button) findViewById(R.id.downloadFormBtn);
        download.setOnClickListener(new View.OnClickListener() {

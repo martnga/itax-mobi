@@ -1,6 +1,7 @@
 package com.nganga.itaxmobi;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -48,14 +49,14 @@ public class PersonalInfo extends Activity implements AdapterView.OnItemSelected
 
 
 
-        String IdNumber = mIdNumber.getText().toString().trim();
-        String BirthDate = mBirthDate.getText().toString().trim();
-        String TaxArea = mTaxRegion.getText().toString().trim();
-        String PostalCode = mPostalCode.getText().toString().trim();
-        String PostalTown = mPostalTown.getText().toString().trim();
-        String Employee = mEmployeeProfession.getSelectedItem().toString().trim();
-        String Email = mEmail.getText().toString().trim();
-        String PhoneNumber = mPhoneNumber.getText().toString().trim();
+        final String idNumber = mIdNumber.getText().toString().trim();
+        final String birthDate = mBirthDate.getText().toString().trim();
+        final String taxArea = mTaxRegion.getText().toString().trim();
+        final String postalCode = mPostalCode.getText().toString().trim();
+        final String postalTown = mPostalTown.getText().toString().trim();
+        final String employee = mEmployeeProfession.getSelectedItem().toString().trim();
+        final String email = mEmail.getText().toString().trim();
+        final String phoneNumber = mPhoneNumber.getText().toString().trim();
 
 
 
@@ -63,8 +64,24 @@ public class PersonalInfo extends Activity implements AdapterView.OnItemSelected
             next.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent i = new Intent(getApplicationContext(), ResidentialDetails.class);
-                    startActivity(i);
+
+                    if(idNumber != null && birthDate != null && taxArea != null &&
+                                    postalCode != null && postalTown != null && employee != null &&
+                                    email != null && phoneNumber != null){
+
+                        Intent i = new Intent(getApplicationContext(), ResidentialDetails.class);
+                        startActivity(i);
+
+                    }else{
+
+                        Context context = getApplicationContext();
+                        CharSequence text = "Please Fill in All Fields To Proceed";
+                        int duration = Toast.LENGTH_SHORT;
+
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
+                    }
+
                 }
             });
 
@@ -73,9 +90,6 @@ public class PersonalInfo extends Activity implements AdapterView.OnItemSelected
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        // the toast notification displays what was selected
-        TextView myText= (TextView) view;
-        Toast.makeText(this,"You selected "+myText.getText(), Toast.LENGTH_SHORT).show();
 
     }
 
