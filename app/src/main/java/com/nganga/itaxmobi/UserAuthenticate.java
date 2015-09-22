@@ -32,7 +32,7 @@ public class UserAuthenticate extends Activity {
         registerCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), RegisterUser.class);
+                Intent i = new Intent(getApplicationContext(), PersonalInfo.class);
                 startActivity(i);
             }
         });

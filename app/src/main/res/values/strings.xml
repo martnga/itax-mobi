@@ -11,6 +11,8 @@
     <string name="select_profession">Select Your Profession</string>
     <string name="select_returns_type">Select Type of Return</string>
     <string name="select_county">Select Your County</string>
+    <string name="select_tax_type">Select Type of Tax</string>
+    <string name="DatePicker">DatePicker</string>
 
     <string-array name="employee_array">
         <item>Accountants</item>
@@ -28,6 +30,11 @@
     <string-array name="type_of_returns_array">
         <item>Original</item>
         <item>Ammend</item>
+    </string-array>
+
+    <string-array name="type_of_tax_array">
+        <item>PAYE</item>
+        <item>Income Tax</item>
     </string-array>
 
     <string-array name="county">
