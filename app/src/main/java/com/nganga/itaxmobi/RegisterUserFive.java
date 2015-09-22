@@ -58,11 +58,11 @@ public class RegisterUserFive extends Activity {
         mDistrict = (EditText)findViewById(R.id.district);
         mPhoneNumber = (EditText)findViewById(R.id.editText8);
         mEmployeesPin = (EditText)findViewById(R.id.employeesPin);
-     mPaye = (RadioButton) findViewById(R.id.payeRadio);
-      mIncomeTax = (RadioButton) findViewById(R.id.incomeTaxRadio);
+        mPaye = (RadioButton) findViewById(R.id.payeRadio);
+        mIncomeTax = (RadioButton) findViewById(R.id.incomeTaxRadio);
 
 
-       mRegisterUser = (Button) findViewById(R.id.registerUserBtn);
+        mRegisterUser = (Button) findViewById(R.id.registerUserBtn);
         mRegisterUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,13 +70,8 @@ public class RegisterUserFive extends Activity {
                 startActivity(i);
             }
         });
-
-//        listens to the register button
-        mRegisterUser.setOnClickListener(new View.OnClickListener(){
-            @Override
-        public void onClick(View view){
-
-                //collect the user data and converts it to a string and removes extra spacing
+/*
+       //collect the user data and converts it to a string and removes extra spacing
                String IdNumber = mIdNumber.getText().toString().trim();
                String BirthDate = mBirthDate.getText().toString().trim();
                 String TaxArea = mTaxArea.getText().toString().trim();
@@ -90,48 +85,10 @@ public class RegisterUserFive extends Activity {
                 String Employee = mEmployeeProfession.getSelectedItem().toString().trim();
                 String District = mDistrict.getText().toString().trim();
                 String PhoneNumber = mPhoneNumber.getText().toString().trim();
-                String EmployeesPin = mEmployeesPin.getText().toString().trim();
+                String EmployeesPin = mEmployeesPin.getText().toString().trim();*/
 
 
 
-                //Store the data in parse
-                ParseUser user = new ParseUser();
-                user.setUsername("my name");
-                user.setPassword("my pass");
-                user.setEmail("email@example.com");
 
-// other fields can be set just like with ParseObject
-              user.put("id_number", IdNumber);
-//                user.put("Birth Date", BirthDate);
-//                user.put("Tax Area", TaxArea);
-                user.put("Postal Code", PostalCode);
-                user.put("Postal Town", PostalTown);
-                user.put("Email", Email);
-                user.put("Street", Street);
-                user.put("Town", Town);
-                user.put("Building", Building);
-                user.put("County ", County );
-                user.put("District", District);
-                user.put("Phone Number",  PhoneNumber);
-                user.put("Employees Pin", EmployeesPin);
-
-
-                // the code below checks if the user signed up successfully
-                user.signUpInBackground(new SignUpCallback() {
-                    @Override
-                    public void done(ParseException e) {
-                        if (e == null){
-                            // user signed up successfully
-
-                            // There is a toast notification below
-                            Toast.makeText(RegisterUserFive.this, "Registered", Toast.LENGTH_LONG).show();
-                        }else{
-                            // error signing up user
-                        }
-                    }
-                });
-
-            }
-        });
     }
 }

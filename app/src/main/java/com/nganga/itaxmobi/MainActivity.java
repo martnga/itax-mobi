@@ -7,7 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.manuelpeinado.fadingactionbar.FadingActionBarHelper;
+
 
 
 public class MainActivity extends Activity {
@@ -19,13 +19,6 @@ public class MainActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        FadingActionBarHelper helper = new FadingActionBarHelper()
-                .actionBarBackground(R.drawable.kra_itax)
-                .headerLayout(R.layout.toolbar)
-                .contentLayout(R.layout.activity_main);
-        setContentView(helper.createView(this));
-        helper.initActionBar(this);
 
     }
 

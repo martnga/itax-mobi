@@ -4,6 +4,16 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter Contact Info."
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.09"
+        android:padding="20dp" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

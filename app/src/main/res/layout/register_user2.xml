@@ -54,7 +54,6 @@
         android:id="@+id/district"
         android:hint="Enter your district of residence."
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.09"
         android:padding="18dp"/>
 
 

@@ -34,49 +34,10 @@ public class Login extends Activity{
         passwordText=(EditText)findViewById(R.id.passwordText);
 
         btnCancel=(Button)findViewById(R.id.btnCancel);
-        // Enable Local Datastore.
-        Parse.enableLocalDatastore(this);
+
 
         Parse.initialize(this, "b8uq0Pb9IV1pInQGFLpg9sUFj0RqZK8mgwfFjHXk", "f6mEQtCQGOFB0TnUfYdRkkR7u66uGIPwP6Lr3UUJ");
 
-//        listen to when the login button is clicked
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View view) {
-                                            // get user input and convert it to string
-                                            String pin = pinText.getText().toString().trim();
-                                            String pass = passwordText.getText().toString().trim();
-                                        }
-                                    }
-        ) ;
-        ParseUser.logInInBackground("Jerry", "showmethemoney", new LogInCallback() {
-            @Override
-            public void done(ParseUser parseUser, com.parse.ParseException e) {
-
-                if (e == null) {
-                    // Hooray! The user is logged in.
-                    Toast.makeText(Login.this, "Welcome back!", Toast.LENGTH_SHORT).show();
-
-                    Intent takeUserHome = new Intent(Login.this, Home.class);
-                    startActivity(takeUserHome);
-                } else {
-                    // Signup failed. Look at the ParseException to see what happened.
-                    AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
-                   builder.setMessage(e.getMessage());
-                    builder.setTitle("Sorry!");
-                    builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int which) {
-                            //close the dialog
-                            dialogInterface.dismiss();
-                        }
-                    });
-                    AlertDialog dialog = builder.create();
-                    dialog.show();
-                }
-            }
-
-        });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
