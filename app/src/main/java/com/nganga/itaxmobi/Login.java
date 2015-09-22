@@ -1,24 +1,22 @@
 package com.nganga.itaxmobi;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.parse.LogInCallback;
 import com.parse.Parse;
 import com.parse.ParseObject;
-import com.parse.ParseUser;
 
 /**
  * Created by nganga on 9/9/15.
  */
-public class Login extends Activity{
+public class Login extends ActionBarActivity{
 
     Button btnLogin,btnCancel;
     EditText pinText,passwordText;
@@ -27,7 +25,9 @@ public class Login extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_user);
+        setContentView(R.layout.login);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
 
         btnLogin=(Button)findViewById(R.id.btnLogin);
         pinText=(EditText)findViewById(R.id.pinText);

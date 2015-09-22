@@ -5,6 +5,8 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,7 +18,7 @@ import com.nganga.itaxmobi.DatePicker.DateDialog;
 /**
  * Created by nganga on 9/17/15.
  */
-public class TaxDetails extends Activity {
+public class TaxDetails extends ActionBarActivity {
 
     protected EditText mEmployeesPin;
     protected Spinner  mTaxType;
@@ -28,6 +30,8 @@ public class TaxDetails extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tax_details);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
 
         mEmployeesPin = (EditText)findViewById(R.id.employeesPinText);
         mRegistrationDate = (EditText)findViewById(R.id.registrationDateText);

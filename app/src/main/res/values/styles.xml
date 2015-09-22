@@ -5,11 +5,10 @@
 
         <!--customize your stuff below-->
 
-       <item name="colorPrimary">#333333</item>
-       <item name="colorPrimaryDark">@color/colorPrimary</item>
-        <item name="android:textColorPrimary">@color/textColorPrimary</item>
-       <item name="android:colorButtonNormal">@color/colorButtonNormal</item>
-       <item name="android:textColor">@color/textColor</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
         <item name="android:fontFamily">sans-serif-thin</item>
         <item name="android:textStyle">normal</item>
 
@@ -17,45 +16,9 @@
 
     </style>
 
-    <style name="iTaxTheme" parent="Theme.AppCompat.Light">
-
-        <!--below is the color of the toolbar title-->
-        <item name="android:textColorPrimary">#ffffff</item>
-        <!--below is the color of the icons-->
-        <item name="android:textColorSecondary">#ffffff</item>
-
-    </style>
-
-    <style name="MyTheme_ActionBar" parent="@style/Theme.AppCompat.Light">
-        <item name="icon">@drawable/ic_kra</item>
-    </style>
 
 
-    <!-- APP Theme which extends Theme App Compact -->
-    <style name="CustomActionBarTheme" parent="@style/Theme.AppCompat">
-        <item name="android:actionOverflowButtonStyle">@style/OverflowButton</item>
-        <item name="actionOverflowButtonStyle">@style/OverflowButton</item>
 
-        <item name="android:dropDownListViewStyle">@style/PopupMenuListView</item>
-        <item name="dropDownListViewStyle">@style/PopupMenuListView</item>
-
-        <item name="actionBarDivider">@null</item>
-
-        <!-- OverFlow Menu Text Color -->
-        <item name="android:textColor">#fff</item>
-    </style>
-
-    <!-- Set Custom Icon for Overflow Button in ActionBar -->
-    <style name="OverflowButton" parent="@style/Widget.AppCompat.ActionButton.Overflow">
-        <item name="android:src">@drawable/menu</item>
-    </style>
-
-    <!-- OverFlow menu Styles -->
-    <style name="PopupMenuListView" parent="@style/Widget.AppCompat.Light.ListView.DropDown">
-        <item name="android:divider">#eee</item>
-        <item name="android:dividerHeight">1dp</item>
-        <item name="android:background">#444</item>
-    </style>
 
 
 </resources>

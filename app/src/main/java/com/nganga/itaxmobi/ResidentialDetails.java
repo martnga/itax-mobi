@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -14,17 +16,13 @@ import android.widget.Toast;
 /**
  * Created by nganga on 9/17/15.
  */
-public class ResidentialDetails extends Activity  implements AdapterView.OnItemSelectedListener{
+public class ResidentialDetails extends ActionBarActivity  implements AdapterView.OnItemSelectedListener{
 
     protected Spinner mCounty;
     protected EditText mStreet;
     protected EditText mTownCity;
     protected EditText mBuilding;
     protected EditText mDistrict;
-
-
-
-
     Button next;
 
 
@@ -32,6 +30,8 @@ public class ResidentialDetails extends Activity  implements AdapterView.OnItemS
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.residential_details);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
 
 
         mStreet = (EditText)findViewById(R.id.streetText);

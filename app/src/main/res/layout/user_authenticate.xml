@@ -7,6 +7,10 @@
     tools:context=".UserAutheticate"
     android:background="#f44">
 
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

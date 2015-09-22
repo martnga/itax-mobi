@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -19,7 +21,7 @@ import android.widget.Toast;
 
 //      added the adapterview to allow the clicks on items to be registered
 
-public class PersonalInfo extends Activity implements AdapterView.OnItemSelectedListener{
+public class PersonalInfo extends ActionBarActivity implements AdapterView.OnItemSelectedListener{
 
     protected EditText mIdNumber;
     protected Spinner mEmployeeProfession;
@@ -36,6 +38,8 @@ public class PersonalInfo extends Activity implements AdapterView.OnItemSelected
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.personal_info);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
 
 
         mIdNumber = (EditText) findViewById(R.id.idNumberText);

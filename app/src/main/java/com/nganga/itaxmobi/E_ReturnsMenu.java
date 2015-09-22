@@ -3,13 +3,15 @@ package com.nganga.itaxmobi;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 /**
  * Created by nganga on 9/14/15.
  */
-public class E_ReturnsMenu extends Activity{
+public class E_ReturnsMenu extends ActionBarActivity{
 
     CardView returns;
 
@@ -18,6 +20,8 @@ public class E_ReturnsMenu extends Activity{
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.e_returns_menu);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
 
         returns = (CardView) findViewById(R.id.returns_card);
 
