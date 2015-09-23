@@ -1,6 +1,7 @@
 package com.nganga.itaxmobi;
 
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +14,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.nganga.itaxmobi.DatePicker.DateDialog;
 
 
 /**
@@ -99,6 +102,28 @@ public class PersonalInfo extends ActionBarActivity implements AdapterView.OnIte
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+    public void onStart(){
+
+        super.onStart();
+        mBirthDate.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+
+            @Override
+            public void onFocusChange(View view, boolean b) {
+
+
+                if (hasWindowFocus()) {
+                    DateDialog dialog = new DateDialog(view);
+                    FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    dialog.show(ft, "Datepicker");
+
+                }
+            }
+        });
+
 
     }
 }
