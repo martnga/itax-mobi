@@ -67,7 +67,7 @@ android:layout_height="match_parent">
 <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="Returns Period From"
+    android:hint="@string/returnsPeriodFrom"
     android:id="@+id/return_period_from"
     android:gravity="center"
     android:layout_gravity="center_horizontal"
@@ -76,7 +76,7 @@ android:layout_height="match_parent">
     <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="Returns period to"
+    android:hint="@string/returnsPeriodTo"
     android:id="@+id/return_period_to"
     android:gravity="center"
     android:layout_gravity="center_horizontal"
@@ -85,7 +85,7 @@ android:layout_height="match_parent">
     <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="Upload form"
+    android:hint="@string/uploadForm"
     android:id="@+id/upload_returns_form"
     android:gravity="center"
     android:layout_gravity="center_horizontal"
@@ -100,7 +100,7 @@ android:layout_height="match_parent">
     <Button
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="@string/submit"
         android:textSize="17sp"
         android:textColor="@color/primary"
         android:id="@+id/submitReturnsBtn"

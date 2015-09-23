@@ -33,7 +33,7 @@
             android:gravity="center"
             android:textSize="27sp"
             android:layout_marginTop = "15dp"
-            android:text="e-Registration">
+            android:text="@string/eRegistration">
         </TextView>
 
         <TextView
@@ -43,7 +43,7 @@
             android:layout_marginTop = "55dp"
             android:textColor="#fff"
             android:textSize="17sp"
-            android:text="Edit your registration status .">
+            android:text="@string/editRegistrationStatus">
         </TextView>
 
     </android.support.v7.widget.CardView>
@@ -73,7 +73,7 @@
             android:gravity="center"
             android:textSize="27sp"
             android:layout_marginTop = "15dp"
-            android:text="e-Returns">
+            android:text="@string/eReturns">
         </TextView>
 
         <TextView
@@ -83,7 +83,7 @@
             android:layout_marginTop = "55dp"
             android:textColor="#fff"
             android:textSize="17sp"
-            android:text="Consult and File your Returns.">
+            android:text="@string/consultFileReturns">
         </TextView>
 
 
@@ -114,7 +114,7 @@
             android:gravity="center"
             android:textSize="27sp"
             android:layout_marginTop = "15dp"
-            android:text="e-Payments">
+            android:text="@string/ePayments">
         </TextView>
 
         <TextView
@@ -124,7 +124,7 @@
             android:layout_marginTop = "55dp"
             android:textColor="#fff"
             android:textSize="17sp"
-            android:text="Consult and Calculate your annual payments.">
+            android:text="@string/consultCalculatePayments">
         </TextView>
 
 

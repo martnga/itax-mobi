@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Enter Your Residential Details"
+        android:text="@string/enterResidentialDetails"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
         android:layout_weight="0.09" />
@@ -32,13 +32,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/streetText"
-        android:hint="Enter the street on which you live in"
+        android:hint="@string/street"
         android:padding="18dp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your town or city of residence."
+        android:hint="@string/townCity"
         android:id="@+id/townCityText"
         android:padding="18dp" />
 
@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buildingText"
-        android:hint="Enter the name of the building."
+        android:hint="@string/building"
         android:layout_gravity="center_horizontal"
         android:padding="18dp"
          />
@@ -56,7 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/districtText"
-        android:hint="Enter your district of residence."
+        android:hint="@string/districtOfResidence"
         android:layout_gravity="center_horizontal"
         android:padding="18dp"/>
 
@@ -69,7 +69,7 @@
     <Button
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="@string/next"
         android:textSize="17sp"
         android:textColor="@color/primary"
         android:id="@+id/regTwoNextBtn"
