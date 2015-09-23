@@ -67,7 +67,7 @@ android:layout_height="match_parent">
 <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="Return Period From"
+    android:hint="Returns Period From"
     android:id="@+id/return_period_from"
     android:gravity="center"
     android:layout_gravity="center_horizontal"
@@ -103,7 +103,7 @@ android:layout_height="match_parent">
         android:text="Submit"
         android:textSize="17sp"
         android:textColor="@color/primary"
-        android:id="@+id/registerUserBtn"
+        android:id="@+id/submitReturnsBtn"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp"
         android:background="@drawable/button_border"
