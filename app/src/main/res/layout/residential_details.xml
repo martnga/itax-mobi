@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:text="Next"
         android:textSize="17sp"
-        android:textColor="#dd1212"
+        android:textColor="@color/primary"
         android:id="@+id/regTwoNextBtn"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp"

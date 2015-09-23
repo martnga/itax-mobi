@@ -4,7 +4,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f44"
     tools:context=".Home">
 
 
@@ -25,7 +24,7 @@
         android:layout_marginTop = "15dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dp"
-        card_view:cardBackgroundColor="#f55">
+        card_view:cardBackgroundColor="@color/primary">
 
 
         <TextView
@@ -65,7 +64,7 @@
         android:layout_gravity="center"
         card_view:cardCornerRadius="0dp"
         android:elevation="20dp"
-        card_view:cardBackgroundColor="#f55">
+        card_view:cardBackgroundColor="@color/primary">
 
 
         <TextView
@@ -107,7 +106,7 @@
         android:layout_gravity="center"
         card_view:cardCornerRadius="0dp"
         android:elevation="20dp"
-        card_view:cardBackgroundColor="#f55">
+        card_view:cardBackgroundColor="@color/primary">
 
         <TextView
             android:layout_width="match_parent"
