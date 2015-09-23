@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.nganga.itaxmobi.DatePicker.DateDialog;
+import com.parse.Parse;
 
 /**
  * Created by nganga on 9/15/15.
@@ -38,6 +39,8 @@ public class Returns extends ActionBarActivity  {
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
+
+        Parse.initialize(this, String.valueOf(R.string.appId), String.valueOf(R.string.clientKey));
 
         mDownload = (Button) findViewById(R.id.downloadFormBtn);
         mSubmit = (Button) findViewById(R.id.submitReturnsBtn);

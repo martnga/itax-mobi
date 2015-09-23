@@ -1,8 +1,10 @@
 package com.nganga.itaxmobi;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -14,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.nganga.itaxmobi.DatePicker.DateDialog;
+import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
@@ -49,6 +52,8 @@ public class TaxDetails extends ActionBarActivity {
         setContentView(R.layout.tax_details);
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
+
+        Parse.initialize(this, String.valueOf(R.string.appId), String.valueOf(R.string.clientKey));
 
         mEmployeesPin = (EditText)findViewById(R.id.employeesPinText);
         mRegisterPassword = (EditText)findViewById(R.id.registerPasswordText);
@@ -127,12 +132,21 @@ public class TaxDetails extends ActionBarActivity {
                                 // Sign up didn't succeed. Look at the ParseException
                                 // to figure out what went wrong
 
-                                Context context = getApplicationContext();
-                                CharSequence text = "Seems Like Something Went Wrong. Please Try Again.";
-                                int duration = Toast.LENGTH_SHORT;
+                                // This show a pop up message to the user with info about the error
+                                AlertDialog.Builder builder = new AlertDialog.Builder(TaxDetails.this);
+                                builder.setMessage(e.getMessage());
+                                builder.setTitle("Sorry Mate!");
+                                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        //to close the dialog
+                                        dialogInterface.dismiss();
+                                    }
+                                });
 
-                                Toast toast = Toast.makeText(context, text, duration);
-                                toast.show();
+                                AlertDialog  dialog = builder.create();
+                                dialog.show();
+
                             }
                         }
                     });
