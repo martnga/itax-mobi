@@ -79,7 +79,7 @@ public class PersonalInfo extends ActionBarActivity implements AdapterView.OnIte
                     }else{
 
                         Context context = getApplicationContext();
-                        CharSequence text = "Please Fill in All Fields To Proceed";
+                        CharSequence text = "Please Fill in The All Fields To Proceed.";
                         int duration = Toast.LENGTH_SHORT;
 
                         Toast toast = Toast.makeText(context, text, duration);

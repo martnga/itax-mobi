@@ -14,7 +14,7 @@
     <string name="select_tax_type">Select Type of Tax</string>
     <string name="DatePicker">DatePicker</string>
     <string name="doNotHavePin">Don\'t have a pin? Register Here.</string>
-    <string name="havePin">Do you have a pin?</string>
+    <string name="havePin">If you already have a PIN, Login Here.</string>
     <string name="slogan">Tax just got simpler.</string>
     <string name="salutation">Welcome Human</string>
     <string name="register">Register</string>
@@ -59,6 +59,7 @@
     <string name="cancelItaxAccount">Cancel your iTax Account</string>
     <string name="eDormance">e-Dormance.</string>
     <string name="accountDeferredTax">Account for Deferred Tax Returns</string>
+    <string name="accountPassword">Enter Password for ITax Account</string>
 
     <string-array name="employee_array">
         <item>Accountants</item>

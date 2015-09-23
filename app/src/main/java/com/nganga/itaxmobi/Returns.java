@@ -71,7 +71,7 @@ public class Returns extends ActionBarActivity  {
                 }else{
 
                     Context context = getApplicationContext();
-                    CharSequence text = "Please Fill in All Fields To Proceed";
+                    CharSequence text = "Please Fill in All The Fields To Proceed.";
                     int duration = Toast.LENGTH_SHORT;
 
                     Toast toast = Toast.makeText(context, text, duration);
