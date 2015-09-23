@@ -11,22 +11,15 @@
         android:id="@+id/app_bar"
         layout="@layout/app_bar" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop = "10dp"
-        android:textSize="35sp"
-        android:text="@string/salutation">
-    </TextView>
 
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:text="@string/slogan">
-    </TextView>
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/kraLogo"
+        android:src="@drawable/itax"
+        android:layout_centerHorizontal="true"
+        />
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
