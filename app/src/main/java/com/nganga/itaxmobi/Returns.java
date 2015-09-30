@@ -65,7 +65,7 @@ public class Returns extends ActionBarActivity  {
             @Override
             public void onClick(View view) {
 
-                if( returnsType != null && returnsDateFrom != null && returnsDateTo != null){
+                if( !returnsType.isEmpty() && !returnsDateFrom.isEmpty() && !returnsDateTo.isEmpty()){
 
                     Intent i = new Intent(getApplicationContext(), Home.class);
                     startActivity(i);

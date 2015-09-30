@@ -57,8 +57,8 @@ public class ResidentialDetails extends ActionBarActivity  implements AdapterVie
             public void onClick(View view) {
 
 
-                if( street != null && town != null && building != null &&
-                        district != null && county != null){
+                if( !street.isEmpty() && !town.isEmpty() && !building.isEmpty() &&
+                        !district.isEmpty() && !county.isEmpty()){
 
                     Intent i = new Intent(getApplicationContext(), TaxDetails.class);
                     startActivity(i);

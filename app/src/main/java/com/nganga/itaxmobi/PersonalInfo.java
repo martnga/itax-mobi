@@ -72,9 +72,9 @@ public class PersonalInfo extends ActionBarActivity implements AdapterView.OnIte
                 @Override
                 public void onClick(View view) {
 
-                    if(idNumber != null && birthDate != null && taxArea != null &&
-                                    postalCode != null && postalTown != null && employee != null &&
-                                    email != null && phoneNumber != null){
+                    if( !idNumber.isEmpty() && !birthDate.isEmpty() && !taxArea.isEmpty() &&
+                                    !postalCode.isEmpty() && !postalTown.isEmpty() && !employee.isEmpty() &&
+                                    !email.isEmpty() && !phoneNumber.isEmpty()){
 
                         Intent i = new Intent(getApplicationContext(), ResidentialDetails.class);
                         startActivity(i);

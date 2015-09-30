@@ -98,7 +98,7 @@ public class TaxDetails extends ActionBarActivity {
             @Override
             public void onClick(View view) {
 
-                if( employeesPin != null && registrationDate != null && taxType != null && registrationPassword != null){
+                if( !employeesPin.isEmpty() && !registrationDate.isEmpty() && !taxType.isEmpty() && !registrationPassword.isEmpty()){
 
                     ParseUser user = new ParseUser();
                     user.setUsername(employeesPin);
