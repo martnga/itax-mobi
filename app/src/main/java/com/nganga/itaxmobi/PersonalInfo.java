@@ -41,8 +41,12 @@ public class PersonalInfo extends ActionBarActivity implements AdapterView.OnIte
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.personal_info);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_kra);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
 
         mIdNumber = (EditText) findViewById(R.id.idNumberText);
@@ -56,25 +60,24 @@ public class PersonalInfo extends ActionBarActivity implements AdapterView.OnIte
 
 
 
-        final String idNumber = mIdNumber.getText().toString().trim();
-        final String birthDate = mBirthDate.getText().toString().trim();
-        final String taxArea = mTaxRegion.getText().toString().trim();
-        final String postalCode = mPostalCode.getText().toString().trim();
-        final String postalTown = mPostalTown.getText().toString().trim();
-        final String employee = mEmployeeProfession.getSelectedItem().toString().trim();
-        final String email = mEmail.getText().toString().trim();
-        final String phoneNumber = mPhoneNumber.getText().toString().trim();
-
-
 
             next= (Button) findViewById(R.id.regOneNextBtn);
             next.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
-                    if(idNumber != null && birthDate != null && taxArea != null &&
-                                    postalCode != null && postalTown != null && employee != null &&
-                                    email != null && phoneNumber != null){
+                    final String idNumber = mIdNumber.getText().toString().trim();
+                    final String birthDate = mBirthDate.getText().toString().trim();
+                    final String taxArea = mTaxRegion.getText().toString().trim();
+                    final String postalCode = mPostalCode.getText().toString().trim();
+                    final String postalTown = mPostalTown.getText().toString().trim();
+                    final String employee = mEmployeeProfession.getSelectedItem().toString().trim();
+                    final String email = mEmail.getText().toString().trim();
+                    final String phoneNumber = mPhoneNumber.getText().toString().trim();
+
+                    if( !idNumber.isEmpty() && !birthDate.isEmpty() && !taxArea.isEmpty() &&
+                                    !postalCode.isEmpty() && !postalTown.isEmpty() && !employee.isEmpty() &&
+                                    !email.isEmpty() && !phoneNumber.isEmpty() ){
 
                         Intent i = new Intent(getApplicationContext(), ResidentialDetails.class);
                         startActivity(i);

@@ -30,8 +30,12 @@ public class ResidentialDetails extends ActionBarActivity  implements AdapterVie
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.residential_details);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_kra);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
 
         mStreet = (EditText)findViewById(R.id.streetText);
@@ -42,12 +46,6 @@ public class ResidentialDetails extends ActionBarActivity  implements AdapterVie
 
 
 
-        final String street = mStreet.getText().toString().trim();
-        final String town = mTownCity.getText().toString().trim();
-        final String building = mBuilding.getText().toString().trim();
-        final String county = mCounty.getSelectedItem().toString().trim();
-        final String district = mDistrict.getText().toString().trim();
-
 
 
 
@@ -56,9 +54,14 @@ public class ResidentialDetails extends ActionBarActivity  implements AdapterVie
             @Override
             public void onClick(View view) {
 
+                final String street = mStreet.getText().toString().trim();
+                final String town = mTownCity.getText().toString().trim();
+                final String building = mBuilding.getText().toString().trim();
+                final String county = mCounty.getSelectedItem().toString().trim();
+                final String district = mDistrict.getText().toString().trim();
 
-                if( street != null && town != null && building != null &&
-                        district != null && county != null){
+                if( !street.isEmpty() && !town.isEmpty() && !building.isEmpty() &&
+                        !district.isEmpty() && !county.isEmpty()){
 
                     Intent i = new Intent(getApplicationContext(), TaxDetails.class);
                     startActivity(i);

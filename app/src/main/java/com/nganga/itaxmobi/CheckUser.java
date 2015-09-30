@@ -14,8 +14,15 @@ public class CheckUser {
         // do stuff with the user
         Intent i = new Intent(getApplicationContext(), Home.class);
         startActivity(i);
+<<<<<<< HEAD
     } else {
         // show the signup or login screen
         setContentView(R.layout.user_authenticate);
+=======
+    } else
+
+
+        // show the signup or login screen
+>>>>>>> a6397e9ff232abade5f438c8d5d1a9578078c574
     }*/
 }

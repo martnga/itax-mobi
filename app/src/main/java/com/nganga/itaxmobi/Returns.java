@@ -38,6 +38,9 @@ public class Returns extends ActionBarActivity  {
         setContentView(R.layout.returns);
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_kra);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
 
         Parse.initialize(this, String.valueOf(R.string.appId), String.valueOf(R.string.clientKey));
@@ -49,9 +52,7 @@ public class Returns extends ActionBarActivity  {
         mReturnsDateTo = (EditText) findViewById(R.id.return_period_to);
 
 
-        final String returnsType = mReturnsType.getSelectedItem().toString().trim();
-        final String  returnsDateFrom = mReturnsDateFrom.getText().toString().trim();
-        final String returnsDateTo = mReturnsDateTo.getText().toString().trim();
+
 
         mDownload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +66,11 @@ public class Returns extends ActionBarActivity  {
             @Override
             public void onClick(View view) {
 
-                if( returnsType != null && returnsDateFrom != null && returnsDateTo != null){
+                final String returnsType = mReturnsType.getSelectedItem().toString().trim();
+                final String  returnsDateFrom = mReturnsDateFrom.getText().toString().trim();
+                final String returnsDateTo = mReturnsDateTo.getText().toString().trim();
+
+                if( !returnsType.isEmpty() && !returnsDateFrom.isEmpty() && !returnsDateTo.isEmpty()){
 
                     Intent i = new Intent(getApplicationContext(), Home.class);
                     startActivity(i);

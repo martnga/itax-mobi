@@ -34,7 +34,6 @@
         android:hint="@string/employeesPin"
         android:id="@+id/employeesPinText"
         android:layout_gravity="center_horizontal"
-        android:textColorHint="@color/primary"
         android:paddingLeft="20dp" />
 
     <EditText
@@ -44,7 +43,6 @@
         android:hint="@string/selectRegistrationDate"
         android:id="@+id/registrationDateText"
         android:layout_gravity="center_horizontal"
-        android:textColorHint="@color/primary"
         android:paddingLeft="20dp" />
 
     <EditText
@@ -54,7 +52,6 @@
         android:id="@+id/registerPasswordText"
         android:layout_marginTop="10dp"
         android:paddingLeft="20dp"
-        android:textColorHint="@color/primary"
         android:hint="@string/accountPassword" />
 
     <Space

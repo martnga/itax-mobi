@@ -24,27 +24,31 @@ import com.parse.ParseUser;
  */
 public class Login extends ActionBarActivity{
 
-    Button btnLogin,btnCancel;
+    Button btnLogin;
     EditText mLoginPinText,mLoginPasswordText;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.login);
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_kra);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         btnLogin=(Button)findViewById(R.id.btnLogin);
         mLoginPinText=(EditText)findViewById(R.id.loginPinText);
         mLoginPasswordText=(EditText)findViewById(R.id.loginPasswordText);
-        btnCancel=(Button)findViewById(R.id.btnCancel);
+
 
         final String loginPin = mLoginPinText.getText().toString().trim();
         final String loginPassword =  mLoginPasswordText.getText().toString().trim();
 
 
-        Parse.initialize(this, String.valueOf(R.string.appId),  String.valueOf(R.string.clientKey));
+        Parse.initialize(this, String.valueOf(R.string.appId), String.valueOf(R.string.clientKey));
 
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -84,12 +88,7 @@ public class Login extends ActionBarActivity{
             }
         });
 
-        btnCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        
     }
 
 }
