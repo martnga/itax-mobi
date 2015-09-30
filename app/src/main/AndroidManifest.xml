@@ -12,9 +12,11 @@
         android:icon="@drawable/ic_kra"
         android:label="@string/app_name"
         android:logo="@drawable/ic_kra"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        >
 
-        <activity android:name=".UserAuthenticate" >
+        <activity android:name=".UserAuthenticate"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,7 +35,7 @@
         </activity>
 
         <activity
-            android:name=".RegisterUser"
+            android:name=".PersonalInfo"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -146,7 +148,7 @@
         </activity>
 
         <activity
-            android:name=".RegisterUserTwo"
+            android:name=".ResidentialDetails"
             android:label="@string/app_name"
             android:uiOptions="splitActionBarWhenNarrow">
             <intent-filter>
@@ -157,29 +159,7 @@
         </activity>
 
         <activity
-            android:name=".RegisterUserThree"
-            android:label="@string/app_name"
-            android:uiOptions="splitActionBarWhenNarrow">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".RegisterUserFour"
-            android:label="@string/app_name"
-            android:uiOptions="splitActionBarWhenNarrow">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".RegisterUserFive"
+            android:name=".TaxDetails"
             android:label="@string/app_name"
             android:uiOptions="splitActionBarWhenNarrow">
             <intent-filter>

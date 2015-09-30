@@ -3,25 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="#f44"
     android:layout_height="match_parent"
     tools:context=".Home">
 
 
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <TextView
+        android:id="@+id/payments_registration_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment Registration"
+        android:textSize="30sp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        />
+
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="0dp"
         android:layout_weight="20"
         android:id="@+id/payment_registration_card"
         android:clickable="true"
         android:layout_gravity="center"
         card_view:cardCornerRadius="0dp"
         android:elevation="20dp"
-        android:layout_marginTop = "55dp"
+        android:layout_marginTop = "10dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dp"
-        card_view:cardBackgroundColor="#f55">
+        card_view:cardBackgroundColor="@color/primary">
+
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -29,27 +44,20 @@
 
             <ImageView
                 android:id="@+id/payment_registration_image"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:contentDescription="Payment Registration"
                 android:src="@drawable/payment_registration" />
 
-            <TextView
-                android:id="@+id/payments_registration_heading"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/payment_registration_image"
-                android:text="Payment Registration"
-                android:textSize="30sp"
-                android:gravity="center"
-                />
+
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_below="@id/payments_registration_heading"
+                android:layout_below="@id/payment_registration_image"
                 android:layout_height="wrap_content"
                 android:text="Calculate and register Returns and payments."
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:textSize="20sp"
                 android:textColor="#fff"
@@ -61,23 +69,32 @@
     </android.support.v7.widget.CardView>
 
 
+    <TextView
+        android:id="@+id/consult_payments_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Consult Payments."
+        android:layout_marginTop="10dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        />
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="0dp"
         android:layout_weight="20"
         android:layout_below="@id/payment_registration_card"
         android:clickable="true"
         android:id="@+id/consult_payments_card"
-        android:layout_marginTop = "29dp"
-        android:layout_marginBottom="55dp"
+        android:layout_marginTop = "10dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dip"
         android:layout_gravity="center"
         card_view:cardCornerRadius="0dp"
         android:elevation="20dp"
-        card_view:cardBackgroundColor="#f55">
+        card_view:cardBackgroundColor="@color/primary">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -91,21 +108,13 @@
                 android:contentDescription="Consult payments"
                 android:src="@drawable/consult_payments" />
 
-            <TextView
-                android:id="@+id/consult_payments_heading"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/consult_payments_image"
-                android:text="Consult Payments."
-                android:textSize="30sp"
-                android:gravity="center"
-                />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_below="@id/consult_payments_heading"
+                android:layout_below="@id/consult_payments_image"
                 android:layout_height="wrap_content"
                 android:text="Ask about Tax Payment."
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:textSize="20sp"
                 android:textColor="#fff"

@@ -16,7 +16,7 @@ import android.widget.Toast;
 /**
  * Created by nganga on 9/11/15.
  */
-public class Home extends Activity {
+public class Home extends ActionBarActivity {
 
     CardView e_returns_card;
     CardView e_registration_card;
@@ -26,6 +26,8 @@ public class Home extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
 
 
         e_returns_card = (CardView) findViewById(R.id.e_returns_card);

@@ -2,26 +2,30 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff">
+    >
 
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_below="@id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:id="@+id/kraLogo"
-        android:src="@drawable/kra_itax"
+        android:src="@drawable/itax"
         android:layout_centerHorizontal="true"
         />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/pinText"
-        android:hint="KRA PIN"
+        android:id="@+id/loginPinText"
+        android:hint="@string/kraPIN"
         android:focusable="true"
-        android:textColorHint="#dd1212"
+        android:textColorHint="@color/primary"
         android:layout_marginTop="46dp"
+        android:paddingLeft="20dp"
         android:layout_below="@+id/kraLogo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -35,15 +39,16 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/passwordText"
-        android:layout_below="@+id/pinText"
+        android:id="@+id/loginPasswordText"
+        android:layout_below="@+id/loginPinText"
         android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/pinText"
-        android:layout_alignEnd="@+id/pinText"
-        android:textColorHint="#dd1212"
-        android:hint="Password" />
+        android:layout_alignRight="@+id/loginPinText"
+        android:layout_alignEnd="@+id/loginPinText"
+        android:textColorHint="@color/primary"
+        android:hint="@string/password" />
 
 
 
@@ -51,26 +56,26 @@
     <Button
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="login"
+        android:text="@string/login"
         android:textSize="17sp"
-        android:textColor="#dd1212"
+        android:textColor="@color/primary"
         android:id="@+id/btnLogin"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="25dp"
-        android:layout_below="@+id/passwordText"
+        android:layout_below="@+id/loginPasswordText"
         android:background="@drawable/button_border"
        />
 
     <Button
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="Cancel"
+        android:text="@string/cancel"
         android:textSize="17sp"
-        android:textColor="#dd1212"
+        android:textColor="@color/primary"
         android:id="@+id/btnCancel"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="75dp"
-        android:layout_below="@+id/passwordText"
+        android:layout_below="@+id/loginPasswordText"
         android:layout_toRightOf="@+id/btnLogin"
         android:background="@drawable/button_border"
         />

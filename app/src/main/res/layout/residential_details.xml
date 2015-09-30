@@ -2,20 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/residentialDetails"
     android:weightSum="1">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="ENTER YOUR RESIDENTIAL DETAILS"
-        android:id="@+id/residentialDetails"
+        android:text="@string/enterResidentialDetails"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="30dp"
+        android:layout_marginTop="15dp"
         android:layout_weight="0.09" />
 
     <Spinner
-        android:id="@+id/county"
+        android:id="@+id/countySpinner"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:spinnerMode="dialog"
@@ -27,22 +31,22 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/street"
-        android:hint="Enter the street on which you live in"
+        android:id="@+id/streetText"
+        android:hint="@string/street"
         android:padding="18dp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your town or city of residence."
-        android:id="@+id/town_city"
+        android:hint="@string/townCity"
+        android:id="@+id/townCityText"
         android:padding="18dp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/building"
-        android:hint="Enter the name of the building."
+        android:id="@+id/buildingText"
+        android:hint="@string/building"
         android:layout_gravity="center_horizontal"
         android:padding="18dp"
          />
@@ -51,22 +55,26 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/district"
-        android:hint="Enter your district of residence."
+        android:id="@+id/districtText"
+        android:hint="@string/districtOfResidence"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.09"
         android:padding="18dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
 
 
     <Button
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="@string/next"
         android:textSize="17sp"
-        android:textColor="#dd1212"
+        android:textColor="@color/primary"
         android:id="@+id/regTwoNextBtn"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="45dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/button_border"
         />
 

@@ -4,6 +4,10 @@ android:orientation="vertical" android:layout_width="match_parent"
 android:layout_height="match_parent">
 
 
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -13,24 +17,24 @@ android:layout_height="match_parent">
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="1dp"
         android:text="@string/two"/>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="1dp"
         android:text="@string/three"/>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="1dp"
         android:text="@string/four"/>
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="1dp"
         android:text="@string/five"/>
 
 
@@ -39,7 +43,7 @@ android:layout_height="match_parent">
         android:layout_height="wrap_content"
         android:text="Download"
         android:textSize="17sp"
-        android:textColor="#333"
+        android:textColor="@color/primary"
         android:id="@+id/downloadFormBtn"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
@@ -63,7 +67,7 @@ android:layout_height="match_parent">
 <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="Return Period From"
+    android:hint="@string/returnsPeriodFrom"
     android:id="@+id/return_period_from"
     android:gravity="center"
     android:layout_gravity="center_horizontal"
@@ -72,7 +76,7 @@ android:layout_height="match_parent">
     <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="Returns period to"
+    android:hint="@string/returnsPeriodTo"
     android:id="@+id/return_period_to"
     android:gravity="center"
     android:layout_gravity="center_horizontal"
@@ -81,22 +85,27 @@ android:layout_height="match_parent">
     <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="upload form"
+    android:hint="@string/uploadForm"
     android:id="@+id/upload_returns_form"
     android:gravity="center"
     android:layout_gravity="center_horizontal"
     android:padding="25dp" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
 
     <Button
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="@string/submit"
         android:textSize="17sp"
-        android:textColor="#dd1212"
-        android:id="@+id/registerUserBtn"
+        android:textColor="@color/primary"
+        android:id="@+id/submitReturnsBtn"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/button_border"
         />
 

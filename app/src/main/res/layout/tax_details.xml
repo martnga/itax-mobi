@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/enterTaxDetails"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"/>
+
+
+    <Spinner
+        android:id="@+id/taxTypeSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="20dp"
+        android:prompt="@string/select_tax_type"
+        android:entries="@array/type_of_tax_array"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/employeesPin"
+        android:id="@+id/employeesPinText"
+        android:layout_gravity="center_horizontal"
+        android:textColorHint="@color/primary"
+        android:paddingLeft="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/selectRegistrationDate"
+        android:id="@+id/registrationDateText"
+        android:layout_gravity="center_horizontal"
+        android:textColorHint="@color/primary"
+        android:paddingLeft="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/registerPasswordText"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/primary"
+        android:hint="@string/accountPassword" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:textSize="17sp"
+        android:textColor="@color/primary"
+        android:id="@+id/registerUserBtn"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_border"
+        />
+
+</LinearLayout>
