@@ -1,8 +1,8 @@
 package com.nganga.itaxmobi;
 
-import android.app.Activity;
+
 import android.content.Intent;
-import android.graphics.Color;
+
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.CardView;
@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+
 
 /**
  * Created by nganga on 9/11/15.

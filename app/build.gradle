@@ -26,5 +26,4 @@ dependencies {
     compile 'com.android.support:cardview-v7:22.2.1'
     compile fileTree(include: 'Parse-*.jar', dir: 'libs')
     compile fileTree(include: 'bolts-android-*.jar', dir: 'libs')
-    compile 'com.google.android.gms:play-services:7.8.0'
 }
