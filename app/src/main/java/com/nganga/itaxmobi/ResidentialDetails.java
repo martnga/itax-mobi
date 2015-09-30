@@ -30,8 +30,12 @@ public class ResidentialDetails extends ActionBarActivity  implements AdapterVie
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.residential_details);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_kra);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
 
         mStreet = (EditText)findViewById(R.id.streetText);

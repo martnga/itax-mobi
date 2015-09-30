@@ -38,6 +38,9 @@ public class Returns extends ActionBarActivity  {
         setContentView(R.layout.returns);
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_kra);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
 
         Parse.initialize(this, String.valueOf(R.string.appId), String.valueOf(R.string.clientKey));

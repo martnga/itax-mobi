@@ -31,9 +31,13 @@ public class Login extends ActionBarActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.login);
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_kra);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         btnLogin=(Button)findViewById(R.id.btnLogin);
         mLoginPinText=(EditText)findViewById(R.id.loginPinText);
@@ -44,7 +48,7 @@ public class Login extends ActionBarActivity{
         final String loginPassword =  mLoginPasswordText.getText().toString().trim();
 
 
-        Parse.initialize(this, String.valueOf(R.string.appId),  String.valueOf(R.string.clientKey));
+        Parse.initialize(this, String.valueOf(R.string.appId), String.valueOf(R.string.clientKey));
 
 
         btnLogin.setOnClickListener(new View.OnClickListener() {

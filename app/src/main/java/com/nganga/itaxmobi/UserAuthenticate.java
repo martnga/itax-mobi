@@ -22,13 +22,14 @@ public class UserAuthenticate extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // This lets user skip to home if logged in
-
-            setContentView(R.layout.user_authenticate);
+        setContentView(R.layout.user_authenticate);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_kra);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         loginCard = (CardView) findViewById(R.id.login_card);
         loginCard.setOnClickListener(new View.OnClickListener() {
