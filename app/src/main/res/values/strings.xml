@@ -35,7 +35,7 @@
     <string name="enterResidentialDetails">Enter Your Residential Details</string>
     <string name="postalAddressTown">Enter your postal address town.</string>
     <string name="postalCode">Enter your postal code</string>
-    <string name="email">Enter your EMail address.</string>
+    <string name="email">Enter your email address.</string>
     <string name="phoneNumber">Enter your mobile phone number.</string>
     <string name="birthDate">Enter your date of birth</string>
     <string name="taxAreaLocality">Enter your Tax area or locality</string>

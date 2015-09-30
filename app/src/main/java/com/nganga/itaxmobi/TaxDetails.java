@@ -74,29 +74,31 @@ public class TaxDetails extends ActionBarActivity {
         mDistrict = (EditText)findViewById(R.id.districtText);
 
 
-        final String employeesPin = mEmployeesPin.getText().toString().trim();
-        final String registrationPassword = mRegisterPassword.getText().toString().trim();
-        final String email = mEmail.getText().toString().trim();
-        final String registrationDate = mRegistrationDate.getText().toString().trim();
-        final String taxType = mTaxType.getSelectedItem().toString().trim();
-        final String idNumber = mIdNumber.getText().toString().trim();
-        final String birthDate = mBirthDate.getText().toString().trim();
-        final String taxArea = mTaxRegion.getText().toString().trim();
-        final String postalCode = mPostalCode.getText().toString().trim();
-        final String postalTown = mPostalTown.getText().toString().trim();
-        final String employeeProfession = mEmployeeProfession.getSelectedItem().toString().trim();
-        final String phoneNumber = mPhoneNumber.getText().toString().trim();
-        final String street = mStreet.getText().toString().trim();
-        final String town = mTownCity.getText().toString().trim();
-        final String building = mBuilding.getText().toString().trim();
-        final String county = mCounty.getSelectedItem().toString().trim();
-        final String district = mDistrict.getText().toString().trim();
+
 
 
         mRegisterUser = (Button) findViewById(R.id.registerUserBtn);
         mRegisterUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                final String employeesPin = mEmployeesPin.getText().toString().trim();
+                final String registrationPassword = mRegisterPassword.getText().toString().trim();
+                final String email = mEmail.getText().toString().trim();
+                final String registrationDate = mRegistrationDate.getText().toString().trim();
+                final String taxType = mTaxType.getSelectedItem().toString().trim();
+                final String idNumber = mIdNumber.getText().toString().trim();
+                final String birthDate = mBirthDate.getText().toString().trim();
+                final String taxArea = mTaxRegion.getText().toString().trim();
+                final String postalCode = mPostalCode.getText().toString().trim();
+                final String postalTown = mPostalTown.getText().toString().trim();
+                final String employeeProfession = mEmployeeProfession.getSelectedItem().toString().trim();
+                final String phoneNumber = mPhoneNumber.getText().toString().trim();
+                final String street = mStreet.getText().toString().trim();
+                final String town = mTownCity.getText().toString().trim();
+                final String building = mBuilding.getText().toString().trim();
+                final String county = mCounty.getSelectedItem().toString().trim();
+                final String district = mDistrict.getText().toString().trim();
 
                 if( !employeesPin.isEmpty() && !registrationDate.isEmpty() && !taxType.isEmpty() && !registrationPassword.isEmpty()){
 

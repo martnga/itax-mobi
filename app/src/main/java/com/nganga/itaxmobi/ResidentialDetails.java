@@ -42,12 +42,6 @@ public class ResidentialDetails extends ActionBarActivity  implements AdapterVie
 
 
 
-        final String street = mStreet.getText().toString().trim();
-        final String town = mTownCity.getText().toString().trim();
-        final String building = mBuilding.getText().toString().trim();
-        final String county = mCounty.getSelectedItem().toString().trim();
-        final String district = mDistrict.getText().toString().trim();
-
 
 
 
@@ -56,6 +50,11 @@ public class ResidentialDetails extends ActionBarActivity  implements AdapterVie
             @Override
             public void onClick(View view) {
 
+                final String street = mStreet.getText().toString().trim();
+                final String town = mTownCity.getText().toString().trim();
+                final String building = mBuilding.getText().toString().trim();
+                final String county = mCounty.getSelectedItem().toString().trim();
+                final String district = mDistrict.getText().toString().trim();
 
                 if( !street.isEmpty() && !town.isEmpty() && !building.isEmpty() &&
                         !district.isEmpty() && !county.isEmpty()){

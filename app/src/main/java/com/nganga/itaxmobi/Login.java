@@ -24,7 +24,7 @@ import com.parse.ParseUser;
  */
 public class Login extends ActionBarActivity{
 
-    Button btnLogin,btnCancel;
+    Button btnLogin;
     EditText mLoginPinText,mLoginPasswordText;
 
 
@@ -38,7 +38,7 @@ public class Login extends ActionBarActivity{
         btnLogin=(Button)findViewById(R.id.btnLogin);
         mLoginPinText=(EditText)findViewById(R.id.loginPinText);
         mLoginPasswordText=(EditText)findViewById(R.id.loginPasswordText);
-        btnCancel=(Button)findViewById(R.id.btnCancel);
+
 
         final String loginPin = mLoginPinText.getText().toString().trim();
         final String loginPassword =  mLoginPasswordText.getText().toString().trim();
@@ -84,12 +84,7 @@ public class Login extends ActionBarActivity{
             }
         });
 
-        btnCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        
     }
 
 }
