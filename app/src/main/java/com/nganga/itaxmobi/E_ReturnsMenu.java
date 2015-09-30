@@ -18,7 +18,7 @@ public class E_ReturnsMenu extends ActionBarActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        super.onCreate(savedInstanceState);g
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.e_returns_menu);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
