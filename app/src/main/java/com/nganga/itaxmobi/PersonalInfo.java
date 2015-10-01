@@ -80,6 +80,14 @@ public class PersonalInfo extends ActionBarActivity implements AdapterView.OnIte
                                     !email.isEmpty() && !phoneNumber.isEmpty() ){
 
                         Intent i = new Intent(getApplicationContext(), ResidentialDetails.class);
+                        i.putExtra("idNumber", idNumber);
+                        i.putExtra("birthDate", birthDate);
+                        i.putExtra("taxArea", taxArea);
+                        i.putExtra("postalCode", postalCode);
+                        i.putExtra("postalTown", postalTown);
+                        i.putExtra("employee", employee);
+                        i.putExtra("email", email);
+                        i.putExtra("phoneNumber", phoneNumber);
                         startActivity(i);
 
                     }else{

@@ -48,8 +48,6 @@ public class Login extends ActionBarActivity{
         final String loginPassword =  mLoginPasswordText.getText().toString().trim();
 
 
-        Parse.initialize(this, String.valueOf(R.string.appId), String.valueOf(R.string.clientKey));
-
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override

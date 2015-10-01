@@ -21,14 +21,7 @@ public class UserAuthenticate extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
         setContentView(R.layout.user_authenticate);
-        // This lets user skip to home if logged in
-=======
-
-        setContentView(R.layout.user_authenticate);
->>>>>>> a6397e9ff232abade5f438c8d5d1a9578078c574
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);

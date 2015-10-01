@@ -43,8 +43,6 @@ public class Returns extends ActionBarActivity  {
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
 
-        Parse.initialize(this, String.valueOf(R.string.appId), String.valueOf(R.string.clientKey));
-
         mDownload = (Button) findViewById(R.id.downloadFormBtn);
         mSubmit = (Button) findViewById(R.id.submitReturnsBtn);
         mReturnsType = (Spinner)findViewById(R.id.type_of_returns_spinner);

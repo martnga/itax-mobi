@@ -38,6 +38,7 @@ public class ResidentialDetails extends ActionBarActivity  implements AdapterVie
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
 
+        final Bundle bundle = getIntent().getExtras();
         mStreet = (EditText)findViewById(R.id.streetText);
         mTownCity = (EditText)findViewById(R.id.townCityText);
         mBuilding = (EditText)findViewById(R.id.buildingText);
@@ -64,6 +65,19 @@ public class ResidentialDetails extends ActionBarActivity  implements AdapterVie
                         !district.isEmpty() && !county.isEmpty()){
 
                     Intent i = new Intent(getApplicationContext(), TaxDetails.class);
+                    i.putExtra("idNumber", bundle.getString("idNumber"));
+                    i.putExtra("birthDate", bundle.getString("birthDate"));
+                    i.putExtra("taxArea", bundle.getString("taxArea"));
+                    i.putExtra("postalCode", bundle.getString("postalCode"));
+                    i.putExtra("postalTown", bundle.getString("postalTown"));
+                    i.putExtra("employee", bundle.getString("employee"));
+                    i.putExtra("email", bundle.getString("email"));
+                    i.putExtra("phoneNumber", bundle.getString("phoneNumber"));
+                    i.putExtra("street", street);
+                    i.putExtra("town", town);
+                    i.putExtra("building", building);
+                    i.putExtra("county", county);
+                    i.putExtra("district", district);
                     startActivity(i);
 
                 }else{

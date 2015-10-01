@@ -29,19 +29,6 @@ public class TaxDetails extends ActionBarActivity {
     protected EditText mEmployeesPin;
     protected Spinner  mTaxType;
     protected EditText mRegistrationDate;
-    protected EditText mIdNumber;
-    protected Spinner mEmployeeProfession;
-    protected EditText mBirthDate;
-    protected EditText mTaxRegion;
-    protected EditText mPostalCode;
-    protected EditText mPostalTown;
-    protected EditText mEmail;
-    protected EditText mPhoneNumber;
-    protected Spinner mCounty;
-    protected EditText mStreet;
-    protected EditText mTownCity;
-    protected EditText mBuilding;
-    protected EditText mDistrict;
     protected  EditText mRegisterPassword;
 
     Button mRegisterUser;
@@ -56,26 +43,12 @@ public class TaxDetails extends ActionBarActivity {
         getSupportActionBar().setLogo(R.drawable.ic_kra);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
-        Parse.initialize(this, String.valueOf(R.string.appId), String.valueOf(R.string.clientKey));
 
+        final Bundle bundle = getIntent().getExtras();
         mEmployeesPin = (EditText)findViewById(R.id.employeesPinText);
         mRegisterPassword = (EditText)findViewById(R.id.registerPasswordText);
         mRegistrationDate = (EditText)findViewById(R.id.registrationDateText);
         mTaxType = (Spinner)findViewById(R.id.taxTypeSpinner);
-        mIdNumber = (EditText) findViewById(R.id.idNumberText);
-        mBirthDate = (EditText) findViewById(R.id.birthDateText);
-        mTaxRegion = (EditText) findViewById(R.id.taxRegionText);
-        mPostalCode = (EditText)findViewById(R.id.postalCodeText);
-        mPostalTown = (EditText)findViewById(R.id.postalAddressTownText);
-        mEmployeeProfession = (Spinner)findViewById(R.id.employeeSpinner);
-        mEmail = (EditText)findViewById(R.id.emailText);
-        mPhoneNumber = (EditText)findViewById(R.id.phoneNumberText);
-        mStreet = (EditText)findViewById(R.id.streetText);
-        mTownCity = (EditText)findViewById(R.id.townCityText);
-        mBuilding = (EditText)findViewById(R.id.buildingText);
-        mCounty = (Spinner)findViewById(R.id.countySpinner);
-        mDistrict = (EditText)findViewById(R.id.districtText);
-
 
 
 
@@ -87,44 +60,31 @@ public class TaxDetails extends ActionBarActivity {
 
                 final String employeesPin = mEmployeesPin.getText().toString().trim();
                 final String registrationPassword = mRegisterPassword.getText().toString().trim();
-                final String email = mEmail.getText().toString().trim();
                 final String registrationDate = mRegistrationDate.getText().toString().trim();
                 final String taxType = mTaxType.getSelectedItem().toString().trim();
-                final String idNumber = mIdNumber.getText().toString().trim();
-                final String birthDate = mBirthDate.getText().toString().trim();
-                final String taxArea = mTaxRegion.getText().toString().trim();
-                final String postalCode = mPostalCode.getText().toString().trim();
-                final String postalTown = mPostalTown.getText().toString().trim();
-                final String employeeProfession = mEmployeeProfession.getSelectedItem().toString().trim();
-                final String phoneNumber = mPhoneNumber.getText().toString().trim();
-                final String street = mStreet.getText().toString().trim();
-                final String town = mTownCity.getText().toString().trim();
-                final String building = mBuilding.getText().toString().trim();
-                final String county = mCounty.getSelectedItem().toString().trim();
-                final String district = mDistrict.getText().toString().trim();
 
                 if( !employeesPin.isEmpty() && !registrationDate.isEmpty() && !taxType.isEmpty() && !registrationPassword.isEmpty()){
 
                     ParseUser user = new ParseUser();
                     user.setUsername(employeesPin);
                     user.setPassword(registrationPassword);
-                    user.setEmail(email);
+                    user.setEmail(bundle.getString("email"));
 
                     // other fields can be set just like with ParseObject
-                    user.put("ID Number",idNumber);
-                    user.put("birthDate", birthDate);
-                    user.put("phone", phoneNumber);
+                    user.put("idNumber",bundle.getString("idNumber"));
+                    user.put("birthDate", bundle.getString("birthDate"));
+                    user.put("phone", bundle.getString("phoneNumber"));
                     user.put("registrationDate", registrationDate);
                     user.put("taxType", taxType);
-                    user.put("taxArea", taxArea);
-                    user.put("postalCode", postalCode);
-                    user.put("postalTown", postalTown);
-                    user.put("employeeProfession", employeeProfession);
-                    user.put("street", street);
-                    user.put("town", town);
-                    user.put("building", building);
-                    user.put("county", county);
-                    user.put("district", district);
+                    user.put("taxArea", bundle.getString("taxArea"));
+                    user.put("postalCode", bundle.getString("postalCode"));
+                    user.put("postalTown", bundle.getString("postalTown"));
+                    user.put("employeeProfession", bundle.getString("employee"));
+                    user.put("street", bundle.getString("street"));
+                    user.put("town", bundle.getString("town"));
+                    user.put("building", bundle.getString("building"));
+                    user.put("county", bundle.getString("county"));
+                    user.put("district", bundle.getString("district"));
 
                     user.signUpInBackground(new SignUpCallback() {
                         public void done(ParseException e) {
