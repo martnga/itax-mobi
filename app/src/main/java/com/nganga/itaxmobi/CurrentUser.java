@@ -3,6 +3,8 @@ package com.nganga.itaxmobi;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.parse.ParseUser;
 
@@ -11,12 +13,16 @@ import com.parse.ParseUser;
  */
 public class CurrentUser extends Activity {
 
+    Button contiueBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.current_user);
 
-        ParseUser currentUser = ParseUser.getCurrentUser();
+        contiueBtn = (Button) findViewById(R.id.continueBtn);
+
+        final ParseUser currentUser = ParseUser.getCurrentUser();
         if (currentUser != null) {
             // do stuff with the user
             Intent i = new Intent(getApplicationContext(), Home.class);
@@ -27,6 +33,25 @@ public class CurrentUser extends Activity {
             Intent i = new Intent(getApplicationContext(), UserAuthenticate.class);
             startActivity(i);
         }
+
+
+        contiueBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (currentUser != null) {
+                    // do stuff with the user
+                    Intent i = new Intent(getApplicationContext(), Home.class);
+                    startActivity(i);
+                } else {
+                    //show the signup or login screen
+
+                    Intent i = new Intent(getApplicationContext(), UserAuthenticate.class);
+                    startActivity(i);
+                }
+
+            }
+        });
 
     }
 }
