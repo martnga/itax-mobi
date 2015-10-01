@@ -44,10 +44,6 @@ public class PersonalInfo extends ActionBarActivity implements AdapterView.OnIte
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.ic_kra);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
-
 
         mIdNumber = (EditText) findViewById(R.id.idNumberText);
         mBirthDate = (EditText) findViewById(R.id.birthDateText);

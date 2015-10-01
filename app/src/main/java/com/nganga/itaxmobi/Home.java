@@ -30,10 +30,6 @@ public class Home extends ActionBarActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.ic_kra);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
-
         e_returns_card = (CardView) findViewById(R.id.e_returns_card);
        e_payments_card = (CardView) findViewById(R.id.e_payments_card);
        e_registration_card = (CardView) findViewById(R.id.e_registration_card);

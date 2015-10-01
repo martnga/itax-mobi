@@ -40,9 +40,7 @@ public class TaxDetails extends ActionBarActivity {
         setContentView(R.layout.tax_details);
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.ic_kra);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
 
 
         final Bundle bundle = getIntent().getExtras();

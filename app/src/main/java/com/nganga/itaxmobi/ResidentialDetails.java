@@ -33,9 +33,7 @@ public class ResidentialDetails extends ActionBarActivity  implements AdapterVie
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.ic_kra);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
 
 
         final Bundle bundle = getIntent().getExtras();

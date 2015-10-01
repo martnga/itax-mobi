@@ -3,6 +3,7 @@ package com.nganga.itaxmobi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.FragmentTransaction;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -43,9 +44,6 @@ public class Returns extends ActionBarActivity  {
         setContentView(R.layout.returns);
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.ic_kra);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
 
         mDownload = (TextView) findViewById(R.id.downloadFormText);
@@ -74,6 +72,12 @@ public class Returns extends ActionBarActivity  {
                 final String returnsDateTo = mReturnsDateTo.getText().toString().trim();
 
                 if( !returnsType.isEmpty() && !returnsDateFrom.isEmpty() && !returnsDateTo.isEmpty()){
+
+                    final ProgressDialog progressDialog = new ProgressDialog(Returns.this,
+                            R.style.AppTheme_Dark_Dialog);
+                    progressDialog.setIndeterminate(true);
+                    progressDialog.setMessage("Authenticating ...");
+                    progressDialog.show();
 
                     ParseObject returns = new ParseObject("Returns");
                     returns.put("returnsType", returnsType);
