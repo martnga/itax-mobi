@@ -40,7 +40,7 @@
             android:textSize="20sp"
             android:layout_height="wrap_content"
             android:text="@string/continueBtn"
-            android:background="@drawable/welcome_border"/>
+            android:background="@drawable/button_border"/>
     </RelativeLayout>
 
 

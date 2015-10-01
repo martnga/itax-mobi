@@ -29,7 +29,7 @@ import com.parse.SaveCallback;
  */
 public class Returns extends ActionBarActivity  {
 
-    Button mDownload;
+    TextView mDownload;
     Button mSubmit;
     protected Spinner mReturnsType;
     EditText mReturnsDateFrom;
@@ -48,7 +48,7 @@ public class Returns extends ActionBarActivity  {
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
 
-        mDownload = (Button) findViewById(R.id.downloadFormBtn);
+        mDownload = (TextView) findViewById(R.id.downloadFormText);
         mSubmit = (Button) findViewById(R.id.submitReturnsBtn);
         mReturnsType = (Spinner)findViewById(R.id.type_of_returns_spinner);
         mReturnsDateFrom = (EditText) findViewById(R.id.return_period_from);

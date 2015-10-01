@@ -63,6 +63,7 @@
     <string name="accountPassword">Enter Password for ITax Account</string>
     <string name="continueBtn">Continue</string>
     <string name="tulipeUshure">Tulipe Ushuru Tujitegemee.</string>
+    <string name="returnsInstructions">Follow The Instructions Below and Fill In All The Fields Before You Submit Your Returns</string>
 
     <string-array name="employee_array">
         <item>Accountants</item>

@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:orientation="vertical" android:layout_width="match_parent"
-android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/primary_dark"
+            android:fitsSystemWindows="true">
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
 
 
     <include
         android:id="@+id/app_bar"
         layout="@layout/app_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/returnsInstructions"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="30dp"/>
 
     <TextView
         android:layout_width="fill_parent"
@@ -17,38 +36,36 @@ android:layout_height="match_parent">
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="5dp"
         android:text="@string/two"/>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="5dp"
         android:text="@string/three"/>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="5dp"
         android:text="@string/four"/>
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="5dp"
         android:text="@string/five"/>
 
 
-    <Button
-        android:layout_width="120dp"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Download"
-        android:textSize="17sp"
-        android:textColor="@color/primary"
-        android:id="@+id/downloadFormBtn"
+        android:id="@+id/downloadFormText"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:background="@drawable/button_border"
+
         />
+
 
 
     <Spinner
@@ -56,45 +73,44 @@ android:layout_height="match_parent">
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:spinnerMode="dialog"
-        android:layout_marginTop="7dp"
-        android:paddingLeft="20dp"
+        android:layout_marginTop="10dp"
         android:prompt="@string/select_returns_type"
         android:entries="@array/type_of_returns_array"
+
         />
 
 
 
-<EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="@string/returnsPeriodFrom"
-    android:id="@+id/return_period_from"
-    android:gravity="center"
-    android:layout_gravity="center_horizontal"
-    android:padding="25dp" />
-
     <EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="@string/returnsPeriodTo"
-    android:id="@+id/return_period_to"
-    android:gravity="center"
-    android:layout_gravity="center_horizontal"
-    android:padding="25dp" />
-
-    <EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="@string/uploadForm"
-    android:id="@+id/upload_returns_form"
-    android:gravity="center"
-    android:layout_gravity="center_horizontal"
-    android:padding="25dp" />
-
-    <Space
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_height="wrap_content"
+        android:hint="@string/returnsPeriodFrom"
+        android:id="@+id/return_period_from"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/returnsPeriodTo"
+        android:id="@+id/return_period_to"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/uploadForm"
+        android:id="@+id/upload_returns_form"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        />
+
 
 
     <Button
@@ -102,11 +118,16 @@ android:layout_height="match_parent">
         android:layout_height="wrap_content"
         android:text="@string/submit"
         android:textSize="17sp"
-        android:textColor="@color/primary"
+        android:textColor="@color/primary_text"
+        android:layout_marginTop="45dp"
         android:id="@+id/submitReturnsBtn"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp"
         android:background="@drawable/button_border"
         />
 
+
+
+
 </LinearLayout>
+</ScrollView>
