@@ -24,6 +24,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/enterPersonalDetails"
         android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
         android:paddingTop="30dp"/>
 
 

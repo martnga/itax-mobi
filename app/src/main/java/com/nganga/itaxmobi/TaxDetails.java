@@ -3,6 +3,7 @@ package com.nganga.itaxmobi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.FragmentTransaction;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -64,6 +65,14 @@ public class TaxDetails extends ActionBarActivity {
                 final String taxType = mTaxType.getSelectedItem().toString().trim();
 
                 if( !employeesPin.isEmpty() && !registrationDate.isEmpty() && !taxType.isEmpty() && !registrationPassword.isEmpty()){
+
+
+                    final ProgressDialog progressDialog = new ProgressDialog(TaxDetails.this,
+                            R.style.AppTheme_Dark_Dialog);
+                    progressDialog.setIndeterminate(true);
+                    progressDialog.setMessage("Please Wait A Moment ...");
+                    progressDialog.show();
+
 
                     ParseUser user = new ParseUser();
                     user.setUsername(employeesPin);
