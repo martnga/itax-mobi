@@ -44,15 +44,18 @@ public class Login extends ActionBarActivity{
         mLoginPasswordText=(EditText)findViewById(R.id.loginPasswordText);
 
 
-        final String loginPin = mLoginPinText.getText().toString().trim();
-        final String loginPassword =  mLoginPasswordText.getText().toString().trim();
+
 
 
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (loginPin != null && loginPassword != null) {
+
+                final String loginPin = mLoginPinText.getText().toString().trim();
+                final String loginPassword =  mLoginPasswordText.getText().toString().trim();
+
+                if ( !loginPin.isEmpty() && !loginPassword.isEmpty()) {
 
                     ParseUser.logInInBackground(loginPin, loginPassword, new LogInCallback() {
                         public void done(ParseUser user, ParseException e) {
