@@ -14,6 +14,7 @@ public class CurrentUser extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.current_user);
 
         ParseUser currentUser = ParseUser.getCurrentUser();
         if (currentUser != null) {

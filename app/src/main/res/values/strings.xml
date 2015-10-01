@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ITax Mobi</string>
+    <string name="app_name">iTax Mobi</string>
     <string name="edit_message">ITax Mobi</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -62,6 +62,8 @@
     <string name="eDormance">e-Dormance.</string>
     <string name="accountDeferredTax">Account for Deferred Tax Returns</string>
     <string name="accountPassword">Enter Password for ITax Account</string>
+    <string name="continueBtn">Continue</string>
+    <string name="tulipeUshure">Tulipe Ushuru Tujitegemee.</string>
 
     <string-array name="employee_array">
         <item>Accountants</item>
