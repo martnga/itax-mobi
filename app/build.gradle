@@ -27,4 +27,5 @@ dependencies {
     compile fileTree(include: 'Parse-*.jar', dir: 'libs')
     compile fileTree(include: 'bolts-android-*.jar', dir: 'libs')
     compile 'com.makeramen:roundedimageview:2.2.0'
+    compile 'com.github.clans:fab:1.6.1'
 }

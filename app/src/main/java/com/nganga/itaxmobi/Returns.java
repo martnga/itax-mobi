@@ -76,7 +76,7 @@ public class Returns extends ActionBarActivity  {
                     final ProgressDialog progressDialog = new ProgressDialog(Returns.this,
                             R.style.AppTheme_Dark_Dialog);
                     progressDialog.setIndeterminate(true);
-                    progressDialog.setMessage("Authenticating ...");
+                    progressDialog.setMessage("Uploading ...");
                     progressDialog.show();
 
                     ParseObject returns = new ParseObject("Returns");
@@ -89,8 +89,23 @@ public class Returns extends ActionBarActivity  {
 
                             if (e == null) {
 
-                                Intent i = new Intent(getApplicationContext(), Home.class);
-                                startActivity(i);
+                                AlertDialog.Builder builder = new AlertDialog.Builder(Returns.this);
+                                builder.setMessage(e.getMessage());
+                                builder.setTitle("Sorry Mate!");
+                                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        //to close the dialog
+                                        Intent intent = new Intent(getApplicationContext(), Home.class);
+                                        startActivity(intent);
+                                        dialogInterface.dismiss();
+                                    }
+                                });
+
+                                AlertDialog dialog = builder.create();
+                                dialog.show();
+
+
 
                             } else {
                                 // Sign up didn't succeed. Look at the ParseException

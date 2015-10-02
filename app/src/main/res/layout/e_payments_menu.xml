@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:text="Payment Registration"
                 android:textSize="30sp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 />
 
@@ -58,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Calculate and register Returns and payments."
-                android:layout_marginTop = "90dp"
+                android:layout_marginTop = "35dp"
                 android:gravity="center"
                 android:textSize="20sp"
                 android:textColor="#fff"
@@ -97,7 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Consult Payments."
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:textSize="30sp"
                 android:gravity="center"
                 />
@@ -107,7 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ask about Tax Payment."
-                android:layout_marginTop = "90dp"
+                android:layout_marginTop = "50dp"
                 android:gravity="center"
                 android:textSize="20sp"
                 android:textColor="#fff"

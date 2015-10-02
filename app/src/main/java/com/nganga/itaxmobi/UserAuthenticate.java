@@ -34,9 +34,6 @@ public class UserAuthenticate extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_authenticate);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
-        setSupportActionBar(toolbar);
-
 
 
         btnLogin=(Button)findViewById(R.id.btnLogin);

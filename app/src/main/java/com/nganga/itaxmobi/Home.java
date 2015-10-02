@@ -1,6 +1,9 @@
 package com.nganga.itaxmobi;
 
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 
 import android.os.Bundle;
@@ -11,6 +14,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+
+import com.github.clans.fab.FloatingActionButton;
+import com.parse.ParseUser;
 
 
 /**
@@ -21,6 +28,7 @@ public class Home extends ActionBarActivity {
     CardView e_returns_card;
     CardView e_registration_card;
     CardView e_payments_card;
+    FloatingActionButton mLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +41,7 @@ public class Home extends ActionBarActivity {
         e_returns_card = (CardView) findViewById(R.id.e_returns_card);
        e_payments_card = (CardView) findViewById(R.id.e_payments_card);
        e_registration_card = (CardView) findViewById(R.id.e_registration_card);
+        mLogout = (FloatingActionButton) findViewById(R.id.logoutBtn);
 
 //        setting background color
 
@@ -57,6 +66,36 @@ public class Home extends ActionBarActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), E_PaymentsMenu.class);
                 startActivity(i);
+            }
+        });
+
+        mLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
+                builder.setMessage("Please Confirm That You Want To Logout");
+                builder.setTitle("Logout");
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                        final ProgressDialog progressDialog = new ProgressDialog(Home.this,
+                                R.style.AppTheme_Dark_Dialog);
+                        progressDialog.setIndeterminate(true);
+                        progressDialog.setMessage("Please Wait...");
+                        progressDialog.show();
+                        ParseUser.logOut();
+                        Intent intent = new Intent(getApplicationContext(), UserAuthenticate.class);
+                        startActivity(intent);
+                        dialogInterface.dismiss();
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
             }
         });
     }
