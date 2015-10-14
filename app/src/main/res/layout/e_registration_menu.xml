@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    android:background="@color/primary_dark">
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <include
         android:id="@+id/app_bar"
         layout="@layout/app_bar" />
 
-    <TextView
-        android:id="@+id/amendment_heading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/eAmendments"
-        android:textSize="30sp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        />
+
 
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20"
+        android:layout_height="170dp"
         android:id="@+id/e_registration_card"
         android:clickable="true"
         android:layout_gravity="center"
@@ -34,152 +31,140 @@
         android:layout_marginTop = "10dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dp"
-        card_view:cardBackgroundColor="@color/primary">
+        card_view:cardBackgroundColor="@color/primary_dark">
 
-        <RelativeLayout
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/e_amendment_image"
-                android:layout_marginTop="7dp"
+            <TextView
+                android:id="@+id/amendment_heading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="Returns"
-                android:src="@drawable/e_ammendment" />
-
+                android:text="@string/eAmendments"
+                android:textSize="30sp"
+                android:layout_marginTop = "15dp"
+                android:gravity="center"
+                />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_below="@id/e_amendment_image"
                 android:layout_height="wrap_content"
                 android:text="@string/editRegistrationDetails"
+                android:layout_marginTop = "35dp"
                 android:gravity="center"
                 android:textSize="20sp"
                 android:textColor="@android:color/white"
                 />
 
-        </RelativeLayout>
+        </LinearLayout>
 
 
     </android.support.v7.widget.CardView>
 
 
 
-    <TextView
-        android:id="@+id/e_cancelation_heading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/eCancelation"
-        android:textSize="30sp"
-        android:gravity="center"
-        />
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20"
+        android:layout_height="170dp"
         android:layout_below="@id/e_registration_card"
         android:clickable="true"
         android:id="@+id/e_cancelation_card"
-        android:layout_marginTop = "10dp"
+        android:layout_marginTop = "25dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dip"
         android:layout_gravity="center"
         card_view:cardCornerRadius="0dp"
         android:elevation="20dp"
-        card_view:cardBackgroundColor="@color/primary">
+        card_view:cardBackgroundColor="@color/primary_dark">
 
-        <RelativeLayout
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/e_cancelation_image"
-                android:layout_marginTop="6dp"
+            <TextView
+                android:id="@+id/e_cancelation_heading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="e_cancelation"
-                android:src="@drawable/e_cancellation" />
-
+                android:layout_marginTop = "15dp"
+                android:text="@string/eCancelation"
+                android:textSize="30sp"
+                android:gravity="center"
+                />
 
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_below="@id/e_cancelation_image"
                 android:layout_height="wrap_content"
                 android:text="@string/cancelItaxAccount"
+                android:layout_marginTop = "35dp"
                 android:gravity="center"
                 android:textSize="20sp"
                 android:textColor="@android:color/white"
                 />
 
-        </RelativeLayout>
+        </LinearLayout>
 
 
 
     </android.support.v7.widget.CardView>
 
 
-    <TextView
-        android:id="@+id/e_dormance_heading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:text="@string/eDormance"
-        android:textSize="30sp"
-        android:gravity="center"
-        />
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20"
+        android:layout_height="170dp"
         android:layout_below="@id/e_cancelation_card"
         android:clickable="true"
         android:id="@+id/e_dormance_card"
-        android:layout_marginTop = "6dp"
+        android:layout_marginTop = "35dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft = "15dp"
         android:layout_marginRight = "15dip"
         android:layout_gravity="center"
         card_view:cardCornerRadius="0dp"
         android:elevation="20dp"
-        card_view:cardBackgroundColor="@color/primary">
+        card_view:cardBackgroundColor="@color/primary_dark">
 
-        <RelativeLayout
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/e_dormance_image"
-                android:layout_marginTop="5dp"
+            <TextView
+                android:id="@+id/e_dormance_heading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="e_dormance"
-                android:src="@drawable/e_dormance" />
+                android:layout_marginTop = "15dp"
+                android:text="@string/eDormance"
+                android:textSize="30sp"
+                android:gravity="center"
+                />
+
 
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_below="@id/e_dormance_image"
                 android:layout_height="wrap_content"
                 android:text="@string/accountDeferredTax"
+                android:layout_marginTop = "35dp"
                 android:gravity="center"
                 android:textSize="20sp"
                 android:textColor="@android:color/white"
                 />
 
-        </RelativeLayout>
+        </LinearLayout>
 
 
 
     </android.support.v7.widget.CardView>
-
-
-
-
-
 </LinearLayout>
+
+
+</ScrollView>
+

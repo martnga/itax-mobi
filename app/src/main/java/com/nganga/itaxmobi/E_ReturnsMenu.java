@@ -23,9 +23,7 @@ public class E_ReturnsMenu extends ActionBarActivity{
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.ic_kra);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
 
         returns = (CardView) findViewById(R.id.returns_card);
 

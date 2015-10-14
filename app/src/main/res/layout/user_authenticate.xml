@@ -1,79 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".UserAutheticate"
-    >
-
-    <include
-        android:id="@+id/app_bar"
-        layout="@layout/app_bar" />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/primary_dark"
+            android:fitsSystemWindows="true">
 
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="'TULIPE USHURU, TUJITEGEMEE'"
-        android:textStyle="italic"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"/>
-
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="30"
-        android:id="@+id/login_card"
-        android:layout_gravity="center"
-        card_view:cardCornerRadius="0dp"
-        android:elevation="20dp"
-        android:clickable="true"
-        android:layout_marginTop = "15dp"
-        android:layout_marginLeft = "15dp"
-        android:layout_marginRight = "15dp"
-        card_view:cardBackgroundColor="@color/primary">
+        android:paddingTop="76dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
 
 
-        <TextView
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="20sp"
-            android:textColor="#fff"
-            android:gravity="center"
-            android:text="@string/havePin">
-        </TextView>
+            android:layout_height="160dp"
+            android:id="@+id/kraLogo"
+            android:src="@drawable/itax"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            app:riv_corner_radius="40dip"
+            app:riv_border_width="1dip"
+            app:riv_border_color="#fff"
+            app:riv_mutate_background="true"
+            app:riv_tile_mode="repeat"
+            app:riv_oval="true" />
 
-    </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="30"
-        android:layout_below="@id/login_card"
-        android:id="@+id/register_card"
-        android:layout_marginTop = "20dp"
-        android:layout_marginBottom = "15dp"
-        android:layout_marginLeft = "15dp"
-        android:layout_marginRight = "15dip"
-        android:layout_gravity="center"
-        card_view:cardCornerRadius="0dp"
-        android:elevation="30dp"
-        android:clickable="true"
-        card_view:cardBackgroundColor="@color/primary">
-
-        <TextView
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginPinText"
+            android:hint="@string/kraPIN"
+            android:focusable="true"
+            android:textColorHint="@color/primary_text"
+            android:layout_marginTop="46dp"
+            />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/loginPasswordText"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/primary_text"
+            android:hint="@string/password" />
+
+
+
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textSize="17sp"
             android:gravity="center"
-            android:textSize="20sp"
-            android:textColor="#fff"
-            android:text="@string/doNotHavePin">
-        </TextView>
+            android:textColor="@color/primary_text"
+            android:id="@+id/btnLogin"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_border"
+            />
 
-    </android.support.v7.widget.CardView>
+        <TextView android:id="@+id/registerLinkText"
+                  android:layout_marginTop="15dp"
+                  android:textColor="#000"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="24dp"
+                  android:text="No account yet ? Create one"
+                  android:gravity="center"
+                  android:textSize="16dip"/>
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

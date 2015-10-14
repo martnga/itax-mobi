@@ -1,8 +1,11 @@
 package com.nganga.itaxmobi;
 
-import android.app.Activity;
+
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
+
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.CardView;
@@ -11,7 +14,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.Button;
+
+import com.github.clans.fab.FloatingActionButton;
+import com.parse.ParseUser;
+
 
 /**
  * Created by nganga on 9/11/15.
@@ -21,6 +28,7 @@ public class Home extends ActionBarActivity {
     CardView e_returns_card;
     CardView e_registration_card;
     CardView e_payments_card;
+    FloatingActionButton mLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +38,10 @@ public class Home extends ActionBarActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.ic_kra);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
-
         e_returns_card = (CardView) findViewById(R.id.e_returns_card);
        e_payments_card = (CardView) findViewById(R.id.e_payments_card);
        e_registration_card = (CardView) findViewById(R.id.e_registration_card);
+        mLogout = (FloatingActionButton) findViewById(R.id.logoutBtn);
 
 //        setting background color
 
@@ -63,12 +68,41 @@ public class Home extends ActionBarActivity {
                 startActivity(i);
             }
         });
+
+        mLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
+                builder.setMessage("Please Confirm That You Want To Logout");
+                builder.setTitle("Logout");
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+
+                        final ProgressDialog progressDialog = new ProgressDialog(Home.this,
+                                R.style.AppTheme_Dark_Dialog);
+                        progressDialog.setIndeterminate(true);
+                        progressDialog.setMessage("Please Wait...");
+                        progressDialog.show();
+                        ParseUser.logOut();
+                        Intent intent = new Intent(getApplicationContext(), UserAuthenticate.class);
+                        startActivity(intent);
+                        dialogInterface.dismiss();
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+            }
+        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.items, menu);
         return super.onCreateOptionsMenu(menu);
     }
 

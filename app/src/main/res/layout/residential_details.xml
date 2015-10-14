@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/residentialDetails"
-    android:weightSum="1">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/primary_dark"
+            android:fitsSystemWindows="true">
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
 
     <include
         android:id="@+id/app_bar"
         layout="@layout/app_bar" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,17 +25,16 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/enterResidentialDetails"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        android:layout_weight="0.09" />
+        android:paddingTop="30dp"/>
 
     <Spinner
         android:id="@+id/countySpinner"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:spinnerMode="dialog"
-        android:paddingLeft="20dp"
         android:prompt="@string/select_county"
         android:entries="@array/county"
+        android:layout_marginTop="10dp"
         />
 
     <EditText
@@ -33,14 +42,16 @@
         android:layout_height="wrap_content"
         android:id="@+id/streetText"
         android:hint="@string/street"
-        android:padding="18dp" />
+        android:layout_marginTop="10dp"
+        />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/townCity"
         android:id="@+id/townCityText"
-        android:padding="18dp" />
+        android:layout_marginTop="10dp"
+        />
 
     <EditText
         android:layout_width="match_parent"
@@ -48,8 +59,8 @@
         android:id="@+id/buildingText"
         android:hint="@string/building"
         android:layout_gravity="center_horizontal"
-        android:padding="18dp"
-         />
+        android:layout_marginTop="10dp"
+        />
 
 
     <EditText
@@ -58,12 +69,10 @@
         android:id="@+id/districtText"
         android:hint="@string/districtOfResidence"
         android:layout_gravity="center_horizontal"
-        android:padding="18dp"/>
+        android:layout_marginTop="10dp"
+        />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
+
 
 
     <Button
@@ -71,11 +80,19 @@
         android:layout_height="wrap_content"
         android:text="@string/next"
         android:textSize="17sp"
-        android:textColor="@color/primary"
+        android:textColor="@color/primary_text"
         android:id="@+id/regTwoNextBtn"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="75dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/button_border"
         />
 
+
+
+
+
+
+
 </LinearLayout>
+</ScrollView>

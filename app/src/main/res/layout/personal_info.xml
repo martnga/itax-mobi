@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/pin_registration">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/primary_dark"
+            android:fitsSystemWindows="true">
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
 
     <include
         android:id="@+id/app_bar"
@@ -14,17 +24,17 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/enterPersonalDetails"
         android:layout_alignParentTop="true"
-        android:padding="20dp"
-        android:layout_marginTop="15dp"/>
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="30dp"/>
 
 
 
     <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/nationalIdNumber"
-            android:id="@+id/idNumberText"
-            android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nationalIdNumber"
+        android:id="@+id/idNumberText"
+        android:layout_marginTop="10dp"
         />
 
     <EditText
@@ -32,7 +42,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/birthDateText"
         android:hint="@string/birthDate"
-        android:padding="20dp"
+        android:layout_marginTop="10dp"
         />
 
     <EditText
@@ -40,9 +50,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/taxRegionText"
         android:hint="@string/taxAreaLocality"
-        android:layout_alignParentStart="true"
-        android:padding="20dp"
-         />
+        android:layout_marginTop="10dp"
+        />
 
 
 
@@ -51,8 +60,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/phoneNumberText"
         android:hint="@string/phoneNumber"
-        android:paddingLeft="20dp"
-         />
+        android:layout_marginTop="10dp"
+        />
 
 
     <EditText
@@ -60,17 +69,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/emailText"
         android:hint="@string/email"
-        android:padding="20dp"
-        />
-
-    <Spinner
-        android:id="@+id/employeeSpinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        android:paddingLeft="20dp"
-        android:prompt="@string/select_profession"
-        android:entries="@array/employee_array"
+        android:layout_marginTop="10dp"
         />
 
     <EditText
@@ -78,23 +77,28 @@
         android:layout_height="wrap_content"
         android:id="@+id/postalCodeText"
         android:hint="@string/postalCode"
-        android:padding="20dp"
-         />
+        android:layout_marginTop="10dp"
+        />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/postalAddressTownText"
         android:hint="@string/postalAddressTown"
-        android:padding="20dp"
-         />
+        android:layout_marginTop="10dp"
+        />
+
+    <Spinner
+        android:id="@+id/employeeSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:prompt="@string/select_profession"
+        android:entries="@array/employee_array"
+        android:layout_marginTop="10dp"
+        />
 
 
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
 
 
     <Button
@@ -102,15 +106,18 @@
         android:layout_height="wrap_content"
         android:text="@string/next"
         android:textSize="17sp"
-        android:textColor="@color/primary"
+        android:textColor="@color/primary_text"
         android:id="@+id/regOneNextBtn"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/button_border"
         />
 
 
-</LinearLayout>
 
+
+
+</LinearLayout>
+</ScrollView>
 
