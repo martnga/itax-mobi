@@ -1,9 +1,11 @@
-package com.nganga.itaxmobi;
+package com.nganga.itaxmobi.UserMainMenu;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+
+import com.nganga.itaxmobi.R;
 
 /**
  * Created by nganga on 9/17/15.

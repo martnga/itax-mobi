@@ -7,6 +7,7 @@
     <color name="primary_text">#fff</color>
     <color name="secondary_text">#fff</color>
     <color name="icons">#FFFFFF</color>
+    <color name="accent">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
 
     <color name="app_primary">#455A64</color>

@@ -1,4 +1,4 @@
-package com.nganga.itaxmobi;
+package com.nganga.itaxmobi.UserMainMenu;
 
 
 import android.app.AlertDialog;
@@ -14,9 +14,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 import com.github.clans.fab.FloatingActionButton;
+import com.nganga.itaxmobi.R;
+import com.nganga.itaxmobi.Registration4Tax.UserAuthenticate;
 import com.parse.ParseUser;
 
 

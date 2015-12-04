@@ -1,12 +1,14 @@
-package com.nganga.itaxmobi;
+package com.nganga.itaxmobi.UserMainMenu;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+
+import com.nganga.itaxmobi.R;
+import com.nganga.itaxmobi.ReturnsDetails.Returns;
 
 /**
  * Created by nganga on 9/14/15.

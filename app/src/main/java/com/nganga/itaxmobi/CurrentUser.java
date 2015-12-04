@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.nganga.itaxmobi.Registration4Tax.UserAuthenticate;
+import com.nganga.itaxmobi.UserMainMenu.Home;
 import com.parse.ParseUser;
 
 /**

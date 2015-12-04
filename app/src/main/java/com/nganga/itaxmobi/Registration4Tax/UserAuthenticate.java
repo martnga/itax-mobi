@@ -1,6 +1,5 @@
-package com.nganga.itaxmobi;
+package com.nganga.itaxmobi.Registration4Tax;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -8,13 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.nganga.itaxmobi.UserMainMenu.Home;
+import com.nganga.itaxmobi.R;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
@@ -39,9 +39,6 @@ public class UserAuthenticate extends ActionBarActivity {
         btnLogin=(Button)findViewById(R.id.btnLogin);
         mLoginPinText=(EditText)findViewById(R.id.loginPinText);
         mLoginPasswordText=(EditText)findViewById(R.id.loginPasswordText);
-
-
-
 
 
 
